@@ -179,7 +179,6 @@ Public Class frmAppointment_Transaction
 
 End Class
 
-' ✅ HELPER CLASS - LAMAN NG COMBO BOX
 Public Class ServiceItem
     Public Property DisplayText As String
     Public Property Code As String

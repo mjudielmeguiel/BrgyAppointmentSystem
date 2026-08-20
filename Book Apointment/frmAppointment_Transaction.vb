@@ -93,7 +93,6 @@ Public Class frmAppointment_Transaction
         UpdateTotals()
     End Sub
 
-    ' ✅ KUWENTAHIN ANG BILANG AT KABUUANG HALAGA
     Private Sub UpdateTotals()
         Dim codeList = GetCodeList()
         Dim totalDocs = codeList.Count
@@ -103,7 +102,6 @@ Public Class frmAppointment_Transaction
         lblTotalAmount.Text = $"₱ {totalAmt:F2}"
     End Sub
 
-    ' ✅ KUNIN ANG LISTAHAN NG MGA CODE
     Private Function GetCodeList() As List(Of String)
         Dim codes = ExtractCodes()
         If String.IsNullOrWhiteSpace(codes) Then Return New List(Of String)()
@@ -111,7 +109,6 @@ Public Class frmAppointment_Transaction
         Return codes.Split(","c).Select(Function(c) c.Trim()).Where(Function(c) Not String.IsNullOrWhiteSpace(c)).ToList()
     End Function
 
-    ' ✅ KUWENTAHIN ANG KABUUANG HALAGA MULA SA MGA CODE
     Private Function GetTotalAmountFromCodes(codes As List(Of String)) As Decimal
         Dim total As Decimal = 0D
 
@@ -137,7 +134,6 @@ Public Class frmAppointment_Transaction
         Return total
     End Function
 
-    ' ✅ KUNIN LANG ANG MGA CODE MULA SA TEXT
     Private Function ExtractCodes() As String
         Dim fullText = lblServiceCodes.Text
         If fullText.Contains("- ") Then
@@ -146,7 +142,6 @@ Public Class frmAppointment_Transaction
         Return String.Empty
     End Function
 
-    ' ✅ I-SAVE ANG LAHAT SA DATABASE
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Try
             Dim codes = ExtractCodes()
@@ -177,7 +172,6 @@ Public Class frmAppointment_Transaction
         End Try
     End Sub
 
-    ' ✅ ISARA ANG FORM
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.DialogResult = DialogResult.Cancel
         Me.Close()

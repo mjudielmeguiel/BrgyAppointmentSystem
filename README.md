@@ -1,6 +1,7 @@
-# Login System
+# Brgy Putatan Appointment System
 
-A simple **VB.NET Windows Forms Login System** built with Visual Studio. This project demonstrates user authentication, password management, and basic user account administration.
+
+A simple **VB.NET Windows Forms Brgy Putatan Appointment System** built with Visual Studio. This project demonstrates user authentication, password management, and basic user account administration.
 
 ## Features
 
@@ -63,10 +64,6 @@ Developed by Mescallado, Judiel Meguiel Torres
 ## Year and Section
 
 BSIT 31E1
-
-## Instructor
-
-Sir. BANAG, ANDRO PHILIP GAMPAY
 
 ## Disclaimer
 

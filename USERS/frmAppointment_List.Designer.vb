@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAppointment_List
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmAppointment_List
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAppointment_List))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -38,8 +38,6 @@ Partial Class frmAppointment_List
         Me.lblPending = New System.Windows.Forms.Label()
         Me.lblPaid = New System.Windows.Forms.Label()
         Me.lblReleased = New System.Windows.Forms.Label()
-        Me.btnPaid = New System.Windows.Forms.Button()
-        Me.btnReleasing = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvAppointments, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,7 +140,7 @@ Partial Class frmAppointment_List
         Me.btnAddNewRecord.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNewRecord.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAddNewRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAddNewRecord.Location = New System.Drawing.Point(1080, 81)
+        Me.btnAddNewRecord.Location = New System.Drawing.Point(1220, 38)
         Me.btnAddNewRecord.Name = "btnAddNewRecord"
         Me.btnAddNewRecord.Size = New System.Drawing.Size(134, 37)
         Me.btnAddNewRecord.TabIndex = 238
@@ -229,47 +227,11 @@ Partial Class frmAppointment_List
         Me.lblReleased.TabIndex = 248
         Me.lblReleased.Text = "-"
         '
-        'btnPaid
-        '
-        Me.btnPaid.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnPaid.BackColor = System.Drawing.Color.DarkBlue
-        Me.btnPaid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnPaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPaid.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPaid.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnPaid.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPaid.Location = New System.Drawing.Point(1080, 40)
-        Me.btnPaid.Name = "btnPaid"
-        Me.btnPaid.Size = New System.Drawing.Size(134, 37)
-        Me.btnPaid.TabIndex = 249
-        Me.btnPaid.Text = "Paid"
-        Me.btnPaid.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnPaid.UseVisualStyleBackColor = False
-        '
-        'btnReleasing
-        '
-        Me.btnReleasing.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnReleasing.BackColor = System.Drawing.Color.DarkBlue
-        Me.btnReleasing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnReleasing.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReleasing.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReleasing.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnReleasing.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnReleasing.Location = New System.Drawing.Point(1220, 40)
-        Me.btnReleasing.Name = "btnReleasing"
-        Me.btnReleasing.Size = New System.Drawing.Size(134, 37)
-        Me.btnReleasing.TabIndex = 250
-        Me.btnReleasing.Text = "Releasing"
-        Me.btnReleasing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnReleasing.UseVisualStyleBackColor = False
-        '
         'frmAppointment_List
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1366, 768)
-        Me.Controls.Add(Me.btnReleasing)
-        Me.Controls.Add(Me.btnPaid)
         Me.Controls.Add(Me.lblReleased)
         Me.Controls.Add(Me.lblPaid)
         Me.Controls.Add(Me.Panel1)
@@ -308,6 +270,4 @@ Partial Class frmAppointment_List
     Friend WithEvents lblPending As Label
     Friend WithEvents lblPaid As Label
     Friend WithEvents lblReleased As Label
-    Friend WithEvents btnPaid As Button
-    Friend WithEvents btnReleasing As Button
 End Class

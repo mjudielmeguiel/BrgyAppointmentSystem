@@ -132,59 +132,65 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book Apointment\frmAppointment_Transaction.Designer.vb">
-      <DependentUpon>frmAppointment_Transaction.vb</DependentUpon>
+    <Compile Include="ADMIN\frmAdmin_Dashboard.Designer.vb">
+      <DependentUpon>frmAdmin_Dashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="Book Apointment\frmAppointment_Transaction.vb">
+    <Compile Include="ADMIN\frmAdmin_Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Book Apointment\frmBook.Designer.vb">
+    <Compile Include="ADMIN\User Manager\frmUserInformation.Designer.vb">
+      <DependentUpon>frmUserInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\User Manager\frmUserInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USERS\Book Apointment\frmBook.Designer.vb">
       <DependentUpon>frmBook.vb</DependentUpon>
     </Compile>
-    <Compile Include="Book Apointment\frmBook.vb">
+    <Compile Include="USERS\Book Apointment\frmBook.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Book Apointment\frmBookAppointment.Designer.vb">
+    <Compile Include="USERS\Book Apointment\frmBookAppointment.Designer.vb">
       <DependentUpon>frmBookAppointment.vb</DependentUpon>
     </Compile>
-    <Compile Include="Book Apointment\frmBookAppointment.vb">
+    <Compile Include="USERS\Book Apointment\frmBookAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBconnection.vb" />
-    <Compile Include="Form Panels\frmAppointment_List.Designer.vb">
+    <Compile Include="USERS\frmAppointment_List.Designer.vb">
       <DependentUpon>frmAppointment_List.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Panels\frmAppointment_List.vb">
+    <Compile Include="USERS\frmAppointment_List.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Panels\frmChangePassword.Designer.vb">
+    <Compile Include="GENERAL\frmChangePassword.Designer.vb">
       <DependentUpon>frmChangePassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Panels\frmChangePassword.vb">
+    <Compile Include="GENERAL\frmChangePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Panels\frmDocumentServices.Designer.vb">
+    <Compile Include="ADMIN\frmDocumentServices.Designer.vb">
       <DependentUpon>frmDocumentServices.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Panels\frmDocumentServices.vb">
+    <Compile Include="ADMIN\frmDocumentServices.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Panels\frmHome.Designer.vb">
-      <DependentUpon>frmHome.vb</DependentUpon>
+    <Compile Include="USERS\frmUser_Dashboard.Designer.vb">
+      <DependentUpon>frmUser_Dashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Panels\frmHome.vb">
+    <Compile Include="USERS\frmUser_Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Panels\frmRecords.Designer.vb">
+    <Compile Include="GENERAL\frmRecords.Designer.vb">
       <DependentUpon>frmRecords.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Panels\frmRecords.vb">
+    <Compile Include="GENERAL\frmRecords.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Panels\frmuserInformation.Designer.vb">
-      <DependentUpon>frmuserInformation.vb</DependentUpon>
+    <Compile Include="ADMIN\User Manager\frmManage_Users.Designer.vb">
+      <DependentUpon>frmManage_Users.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Panels\frmuserInformation.vb">
+    <Compile Include="ADMIN\User Manager\frmManage_Users.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmcreateadmin.Designer.vb">
@@ -193,10 +199,10 @@
     <Compile Include="frmcreateadmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Panels\frmcreateuser.Designer.vb">
+    <Compile Include="ADMIN\User Manager\frmcreateuser.Designer.vb">
       <DependentUpon>frmcreateuser.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Panels\frmcreateuser.vb">
+    <Compile Include="ADMIN\User Manager\frmcreateuser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmlogin.Designer.vb">
@@ -229,37 +235,40 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Book Apointment\frmAppointment_Transaction.resx">
-      <DependentUpon>frmAppointment_Transaction.vb</DependentUpon>
+    <EmbeddedResource Include="ADMIN\frmAdmin_Dashboard.resx">
+      <DependentUpon>frmAdmin_Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Book Apointment\frmBook.resx">
+    <EmbeddedResource Include="ADMIN\User Manager\frmUserInformation.resx">
+      <DependentUpon>frmUserInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERS\Book Apointment\frmBook.resx">
       <DependentUpon>frmBook.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Book Apointment\frmBookAppointment.resx">
+    <EmbeddedResource Include="USERS\Book Apointment\frmBookAppointment.resx">
       <DependentUpon>frmBookAppointment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Panels\frmAppointment_List.resx">
+    <EmbeddedResource Include="USERS\frmAppointment_List.resx">
       <DependentUpon>frmAppointment_List.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Panels\frmChangePassword.resx">
+    <EmbeddedResource Include="GENERAL\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Panels\frmDocumentServices.resx">
+    <EmbeddedResource Include="ADMIN\frmDocumentServices.resx">
       <DependentUpon>frmDocumentServices.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Panels\frmHome.resx">
-      <DependentUpon>frmHome.vb</DependentUpon>
+    <EmbeddedResource Include="USERS\frmUser_Dashboard.resx">
+      <DependentUpon>frmUser_Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Panels\frmRecords.resx">
+    <EmbeddedResource Include="GENERAL\frmRecords.resx">
       <DependentUpon>frmRecords.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Panels\frmuserInformation.resx">
-      <DependentUpon>frmuserInformation.vb</DependentUpon>
+    <EmbeddedResource Include="ADMIN\User Manager\frmManage_Users.resx">
+      <DependentUpon>frmManage_Users.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmcreateadmin.resx">
       <DependentUpon>frmcreateadmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Panels\frmcreateuser.resx">
+    <EmbeddedResource Include="ADMIN\User Manager\frmcreateuser.resx">
       <DependentUpon>frmcreateuser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmlogin.resx">
@@ -288,5 +297,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

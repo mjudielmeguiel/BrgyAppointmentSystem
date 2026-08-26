@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmHome
+Partial Class frmAdmin_Dashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmHome
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHome))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdmin_Dashboard))
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblTotalUsers = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -34,12 +34,12 @@ Partial Class frmHome
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblLockedAccounts = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.lblWelcome = New System.Windows.Forms.Label()
         Me.lblDateTime = New System.Windows.Forms.Label()
+        Me.lblWelcome = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lblDept = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblDept = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -54,7 +54,7 @@ Partial Class frmHome
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(50, 41)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 151
+        Me.PictureBox2.TabIndex = 174
         Me.PictureBox2.TabStop = False
         '
         'lblTotalUsers
@@ -76,7 +76,7 @@ Partial Class frmHome
         Me.Panel1.Location = New System.Drawing.Point(49, 140)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(237, 113)
-        Me.Panel1.TabIndex = 165
+        Me.Panel1.TabIndex = 175
         '
         'Label1
         '
@@ -97,7 +97,7 @@ Partial Class frmHome
         Me.Panel2.Location = New System.Drawing.Point(328, 140)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(237, 113)
-        Me.Panel2.TabIndex = 167
+        Me.Panel2.TabIndex = 176
         '
         'lblActiveUsers
         '
@@ -129,7 +129,7 @@ Partial Class frmHome
         Me.Panel3.Location = New System.Drawing.Point(607, 140)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(237, 113)
-        Me.Panel3.TabIndex = 168
+        Me.Panel3.TabIndex = 177
         '
         'lblLockedAccounts
         '
@@ -153,17 +153,6 @@ Partial Class frmHome
         Me.Label6.TabIndex = 164
         Me.Label6.Text = "Locked Accounts"
         '
-        'lblWelcome
-        '
-        Me.lblWelcome.AutoSize = True
-        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.ForeColor = System.Drawing.Color.Navy
-        Me.lblWelcome.Location = New System.Drawing.Point(43, 64)
-        Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(20, 26)
-        Me.lblWelcome.TabIndex = 169
-        Me.lblWelcome.Text = "-"
-        '
         'lblDateTime
         '
         Me.lblDateTime.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -173,35 +162,24 @@ Partial Class frmHome
         Me.lblDateTime.Location = New System.Drawing.Point(937, 37)
         Me.lblDateTime.Name = "lblDateTime"
         Me.lblDateTime.Size = New System.Drawing.Size(20, 26)
-        Me.lblDateTime.TabIndex = 170
+        Me.lblDateTime.TabIndex = 179
         Me.lblDateTime.Text = "-"
+        '
+        'lblWelcome
+        '
+        Me.lblWelcome.AutoSize = True
+        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcome.ForeColor = System.Drawing.Color.Navy
+        Me.lblWelcome.Location = New System.Drawing.Point(43, 64)
+        Me.lblWelcome.Name = "lblWelcome"
+        Me.lblWelcome.Size = New System.Drawing.Size(20, 26)
+        Me.lblWelcome.TabIndex = 178
+        Me.lblWelcome.Text = "-"
         '
         'Timer1
         '
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
-        '
-        'lblDept
-        '
-        Me.lblDept.AutoSize = True
-        Me.lblDept.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDept.ForeColor = System.Drawing.Color.Navy
-        Me.lblDept.Location = New System.Drawing.Point(43, 28)
-        Me.lblDept.Name = "lblDept"
-        Me.lblDept.Size = New System.Drawing.Size(27, 36)
-        Me.lblDept.TabIndex = 171
-        Me.lblDept.Text = "-"
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(1201, 718)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(153, 22)
-        Me.Label4.TabIndex = 172
-        Me.Label4.Text = "Barangay Putatan"
         '
         'Label2
         '
@@ -211,29 +189,48 @@ Partial Class frmHome
         Me.Label2.Location = New System.Drawing.Point(1202, 740)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 19)
-        Me.Label2.TabIndex = 173
+        Me.Label2.TabIndex = 182
         Me.Label2.Text = "City of Muntinlupa"
         '
-        'frmHome
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(1201, 718)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(153, 22)
+        Me.Label4.TabIndex = 181
+        Me.Label4.Text = "Barangay Putatan"
+        '
+        'lblDept
+        '
+        Me.lblDept.AutoSize = True
+        Me.lblDept.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDept.ForeColor = System.Drawing.Color.Navy
+        Me.lblDept.Location = New System.Drawing.Point(43, 28)
+        Me.lblDept.Name = "lblDept"
+        Me.lblDept.Size = New System.Drawing.Size(27, 36)
+        Me.lblDept.TabIndex = 180
+        Me.lblDept.Text = "-"
+        '
+        'frmAdmin_Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1366, 768)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.lblDateTime)
+        Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblDept)
-        Me.Controls.Add(Me.lblDateTime)
-        Me.Controls.Add(Me.lblWelcome)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.PictureBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmHome"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmHome"
+        Me.Name = "frmAdmin_Dashboard"
+        Me.Text = "frmAdmin_Dashboard"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -256,10 +253,10 @@ Partial Class frmHome
     Friend WithEvents Panel3 As Panel
     Friend WithEvents lblLockedAccounts As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents lblWelcome As Label
     Friend WithEvents lblDateTime As Label
+    Friend WithEvents lblWelcome As Label
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents lblDept As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lblDept As Label
 End Class

@@ -17,7 +17,7 @@ Public Class frmMain
         End Select
 
         Panel2.Controls.Clear()
-        Dim Home As New frmHome
+        Dim Home As New frmUser_Dashboard
         Home.TopLevel = False
         Home.FormBorderStyle = FormBorderStyle.None
         Home.Dock = DockStyle.Fill
@@ -53,7 +53,7 @@ Public Class frmMain
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Panel2.Controls.Clear()
-        Dim Home As New frmHome
+        Dim Home As New frmUser_Dashboard
         Home.TopLevel = False
         Home.FormBorderStyle = FormBorderStyle.None
         Home.Dock = DockStyle.Fill
@@ -63,7 +63,7 @@ Public Class frmMain
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Panel2.Controls.Clear()
-        Dim User As New frmuserInformation
+        Dim User As New frmManage_Users
         User.TopLevel = False
         User.FormBorderStyle = FormBorderStyle.None
         User.Dock = DockStyle.Fill

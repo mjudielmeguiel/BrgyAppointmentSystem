@@ -4,16 +4,13 @@ Imports MySql.Data.MySqlClient
 
 Public Class frmDocumentServices
 
-    ' ✅ IPAPASA BALIK SA IBA PANG FORM
     Public Property SelectedCodes As String = ""
     Public Property SelectedNames As String = ""
     Public Property TotalAmount As Decimal = 0.00D
 
-    ' ✅ ITATAGO NATIN ANG ORIHINAL NA CODE PAG NAG-EDIT KA
     Private originalCode As String = ""
 
     Private Sub frmDocumentServices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' ✅ AYUSIN ANG LISTVIEW
         lvServices.View = View.Details
         lvServices.FullRowSelect = True
         lvServices.GridLines = False
@@ -25,7 +22,6 @@ Public Class frmDocumentServices
         LoadServicesToList()
     End Sub
 
-    ' ✅ KUKUHA LAHAT NG DOKUMENTO MULA SA TABLE
     Private Sub LoadServicesToList()
         Try
             DBconnection.connection()
@@ -54,7 +50,6 @@ Public Class frmDocumentServices
         End Try
     End Sub
 
-    ' ✅ TUWING MAY PINILI — LALABAS SA BABA AT PWEDENG I-EDIT
     Private Sub lvServices_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvServices.SelectedIndexChanged
         If lvServices.SelectedItems.Count = 0 Then
             txtServiceName.Clear()
@@ -65,7 +60,7 @@ Public Class frmDocumentServices
         End If
 
         Dim selectedItem = lvServices.SelectedItems(0)
-        originalCode = selectedItem.Text  ' ✅ ORIHINAL NA CODE — HINDI NAGBABAGO
+        originalCode = selectedItem.Text
         Dim name As String = selectedItem.SubItems(1).Text
         Dim amountText As String = selectedItem.SubItems(2).Text
 

@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class frmHome
+Public Class frmUser_Dashboard
 
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadUserInfoAndCounts()

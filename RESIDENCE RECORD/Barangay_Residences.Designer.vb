@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmcreateuser
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Barangay_Residences
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,9 @@ Partial Class frmcreateuser
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmcreateuser))
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.picIDBack = New System.Windows.Forms.PictureBox()
-        Me.picUser = New System.Windows.Forms.PictureBox()
-        Me.lblPictureError = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.picIDFront = New System.Windows.Forms.PictureBox()
-        Me.lblIdError = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Barangay_Residences))
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblStaffCode = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -83,110 +74,19 @@ Partial Class frmcreateuser
         Me.Label74 = New System.Windows.Forms.Label()
         Me.Label75 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.cboRole = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.picIDBack = New System.Windows.Forms.PictureBox()
+        Me.picUser = New System.Windows.Forms.PictureBox()
+        Me.lblPictureError = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.picIDFront = New System.Windows.Forms.PictureBox()
+        Me.lblIdError = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
         CType(Me.picIDBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picIDFront, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(444, 127)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(36, 19)
-        Me.Label6.TabIndex = 564
-        Me.Label6.Text = "Back"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(233, 127)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 19)
-        Me.Label1.TabIndex = 563
-        Me.Label1.Text = "Front"
-        '
-        'picIDBack
-        '
-        Me.picIDBack.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.picIDBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.picIDBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picIDBack.Location = New System.Drawing.Point(441, 124)
-        Me.picIDBack.Name = "picIDBack"
-        Me.picIDBack.Size = New System.Drawing.Size(205, 105)
-        Me.picIDBack.TabIndex = 562
-        Me.picIDBack.TabStop = False
-        '
-        'picUser
-        '
-        Me.picUser.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.picUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picUser.Location = New System.Drawing.Point(19, 124)
-        Me.picUser.Name = "picUser"
-        Me.picUser.Size = New System.Drawing.Size(205, 105)
-        Me.picUser.TabIndex = 561
-        Me.picUser.TabStop = False
-        '
-        'lblPictureError
-        '
-        Me.lblPictureError.AutoSize = True
-        Me.lblPictureError.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPictureError.Location = New System.Drawing.Point(10, 102)
-        Me.lblPictureError.Name = "lblPictureError"
-        Me.lblPictureError.Size = New System.Drawing.Size(168, 19)
-        Me.lblPictureError.TabIndex = 560
-        Me.lblPictureError.Text = "Please upload clear image."
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Navy
-        Me.Label2.Location = New System.Drawing.Point(10, 80)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(126, 22)
-        Me.Label2.TabIndex = 559
-        Me.Label2.Text = "Profile Picture"
-        '
-        'picIDFront
-        '
-        Me.picIDFront.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.picIDFront.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.picIDFront.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picIDFront.Location = New System.Drawing.Point(230, 124)
-        Me.picIDFront.Name = "picIDFront"
-        Me.picIDFront.Size = New System.Drawing.Size(205, 105)
-        Me.picIDFront.TabIndex = 556
-        Me.picIDFront.TabStop = False
-        '
-        'lblIdError
-        '
-        Me.lblIdError.AutoSize = True
-        Me.lblIdError.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdError.Location = New System.Drawing.Point(228, 102)
-        Me.lblIdError.Name = "lblIdError"
-        Me.lblIdError.Size = New System.Drawing.Size(266, 19)
-        Me.lblIdError.TabIndex = 558
-        Me.lblIdError.Text = "Please upload a valid form of identification."
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.ForeColor = System.Drawing.Color.Navy
-        Me.Label50.Location = New System.Drawing.Point(228, 80)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(118, 22)
-        Me.Label50.TabIndex = 557
-        Me.Label50.Text = "Identification"
         '
         'Label5
         '
@@ -195,7 +95,7 @@ Partial Class frmcreateuser
         Me.Label5.Location = New System.Drawing.Point(549, 343)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(15, 19)
-        Me.Label5.TabIndex = 555
+        Me.Label5.TabIndex = 492
         Me.Label5.Text = "-"
         '
         'lblStaffCode
@@ -206,7 +106,7 @@ Partial Class frmcreateuser
         Me.lblStaffCode.Location = New System.Drawing.Point(371, 257)
         Me.lblStaffCode.Name = "lblStaffCode"
         Me.lblStaffCode.Size = New System.Drawing.Size(92, 22)
-        Me.lblStaffCode.TabIndex = 554
+        Me.lblStaffCode.TabIndex = 491
         Me.lblStaffCode.Text = "Staff code"
         '
         'Label4
@@ -216,7 +116,7 @@ Partial Class frmcreateuser
         Me.Label4.Location = New System.Drawing.Point(173, 924)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(304, 38)
-        Me.Label4.TabIndex = 553
+        Me.Label4.TabIndex = 490
         Me.Label4.Text = "By signing up, you agree to our Terms of Services" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and Privacy Policy."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -228,7 +128,7 @@ Partial Class frmcreateuser
         Me.Label3.Location = New System.Drawing.Point(207, 19)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(207, 28)
-        Me.Label3.TabIndex = 552
+        Me.Label3.TabIndex = 489
         Me.Label3.Text = "Create an Account"
         '
         'btnCancel
@@ -243,7 +143,7 @@ Partial Class frmcreateuser
         Me.btnCancel.Location = New System.Drawing.Point(12, 884)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(636, 37)
-        Me.btnCancel.TabIndex = 551
+        Me.btnCancel.TabIndex = 485
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -256,7 +156,7 @@ Partial Class frmcreateuser
         Me.txtBarangay.Name = "txtBarangay"
         Me.txtBarangay.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtBarangay.Size = New System.Drawing.Size(163, 28)
-        Me.txtBarangay.TabIndex = 534
+        Me.txtBarangay.TabIndex = 466
         '
         'txtCity
         '
@@ -266,7 +166,7 @@ Partial Class frmcreateuser
         Me.txtCity.Name = "txtCity"
         Me.txtCity.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCity.Size = New System.Drawing.Size(169, 28)
-        Me.txtCity.TabIndex = 535
+        Me.txtCity.TabIndex = 467
         '
         'btnSubmit
         '
@@ -279,7 +179,7 @@ Partial Class frmcreateuser
         Me.btnSubmit.Location = New System.Drawing.Point(12, 841)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(636, 37)
-        Me.btnSubmit.TabIndex = 505
+        Me.btnSubmit.TabIndex = 433
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSubmit.UseVisualStyleBackColor = False
@@ -291,7 +191,7 @@ Partial Class frmcreateuser
         Me.lblMobileError.Location = New System.Drawing.Point(10, 717)
         Me.lblMobileError.Name = "lblMobileError"
         Me.lblMobileError.Size = New System.Drawing.Size(15, 19)
-        Me.lblMobileError.TabIndex = 533
+        Me.lblMobileError.TabIndex = 465
         Me.lblMobileError.Text = "-"
         '
         'lblUsernameError
@@ -301,7 +201,7 @@ Partial Class frmcreateuser
         Me.lblUsernameError.Location = New System.Drawing.Point(13, 796)
         Me.lblUsernameError.Name = "lblUsernameError"
         Me.lblUsernameError.Size = New System.Drawing.Size(15, 19)
-        Me.lblUsernameError.TabIndex = 517
+        Me.lblUsernameError.TabIndex = 448
         Me.lblUsernameError.Text = "-"
         '
         'Label43
@@ -311,7 +211,7 @@ Partial Class frmcreateuser
         Me.Label43.Location = New System.Drawing.Point(306, 384)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(65, 19)
-        Me.Label43.TabIndex = 536
+        Me.Label43.TabIndex = 468
         Me.Label43.Text = "Barangay"
         '
         'lblConfirmPassError
@@ -321,7 +221,7 @@ Partial Class frmcreateuser
         Me.lblConfirmPassError.Location = New System.Drawing.Point(453, 796)
         Me.lblConfirmPassError.Name = "lblConfirmPassError"
         Me.lblConfirmPassError.Size = New System.Drawing.Size(15, 19)
-        Me.lblConfirmPassError.TabIndex = 516
+        Me.lblConfirmPassError.TabIndex = 446
         Me.lblConfirmPassError.Text = "-"
         '
         'txtMobileNumber
@@ -332,7 +232,7 @@ Partial Class frmcreateuser
         Me.txtMobileNumber.Name = "txtMobileNumber"
         Me.txtMobileNumber.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtMobileNumber.Size = New System.Drawing.Size(292, 28)
-        Me.txtMobileNumber.TabIndex = 531
+        Me.txtMobileNumber.TabIndex = 463
         '
         'txtConfirmPass
         '
@@ -343,7 +243,7 @@ Partial Class frmcreateuser
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txtConfirmPass.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtConfirmPass.Size = New System.Drawing.Size(191, 28)
-        Me.txtConfirmPass.TabIndex = 514
+        Me.txtConfirmPass.TabIndex = 442
         '
         'Label47
         '
@@ -352,7 +252,7 @@ Partial Class frmcreateuser
         Me.Label47.Location = New System.Drawing.Point(11, 553)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(15, 19)
-        Me.Label47.TabIndex = 550
+        Me.Label47.TabIndex = 484
         Me.Label47.Text = "-"
         '
         'Label48
@@ -362,7 +262,7 @@ Partial Class frmcreateuser
         Me.Label48.Location = New System.Drawing.Point(453, 743)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(118, 19)
-        Me.Label48.TabIndex = 515
+        Me.Label48.TabIndex = 443
         Me.Label48.Text = "Confirm Password"
         '
         'Label49
@@ -372,7 +272,7 @@ Partial Class frmcreateuser
         Me.Label49.Location = New System.Drawing.Point(475, 384)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(31, 19)
-        Me.Label49.TabIndex = 537
+        Me.Label49.TabIndex = 469
         Me.Label49.Text = "City"
         '
         'txtPassword
@@ -384,7 +284,7 @@ Partial Class frmcreateuser
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtPassword.Size = New System.Drawing.Size(191, 28)
-        Me.txtPassword.TabIndex = 512
+        Me.txtPassword.TabIndex = 440
         '
         'Label51
         '
@@ -393,7 +293,7 @@ Partial Class frmcreateuser
         Me.Label51.Location = New System.Drawing.Point(11, 664)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(104, 19)
-        Me.Label51.TabIndex = 532
+        Me.Label51.TabIndex = 464
         Me.Label51.Text = "Mobile Number"
         '
         'Label52
@@ -403,7 +303,7 @@ Partial Class frmcreateuser
         Me.Label52.Location = New System.Drawing.Point(256, 743)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(65, 19)
-        Me.Label52.TabIndex = 513
+        Me.Label52.TabIndex = 441
         Me.Label52.Text = "Password"
         '
         'dtpBirthday
@@ -412,7 +312,7 @@ Partial Class frmcreateuser
         Me.dtpBirthday.Location = New System.Drawing.Point(14, 503)
         Me.dtpBirthday.Name = "dtpBirthday"
         Me.dtpBirthday.Size = New System.Drawing.Size(290, 28)
-        Me.dtpBirthday.TabIndex = 538
+        Me.dtpBirthday.TabIndex = 470
         '
         'txtUsername
         '
@@ -422,7 +322,7 @@ Partial Class frmcreateuser
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtUsername.Size = New System.Drawing.Size(242, 28)
-        Me.txtUsername.TabIndex = 510
+        Me.txtUsername.TabIndex = 438
         '
         'Label53
         '
@@ -431,7 +331,7 @@ Partial Class frmcreateuser
         Me.Label53.Location = New System.Drawing.Point(193, 288)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(67, 19)
-        Me.Label53.TabIndex = 507
+        Me.Label53.TabIndex = 435
         Me.Label53.Text = "Firstname"
         '
         'Label54
@@ -441,7 +341,7 @@ Partial Class frmcreateuser
         Me.Label54.Location = New System.Drawing.Point(8, 743)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(69, 19)
-        Me.Label54.TabIndex = 511
+        Me.Label54.TabIndex = 439
         Me.Label54.Text = "Username"
         '
         'Label57
@@ -451,7 +351,7 @@ Partial Class frmcreateuser
         Me.Label57.Location = New System.Drawing.Point(11, 481)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(58, 19)
-        Me.Label57.TabIndex = 539
+        Me.Label57.TabIndex = 471
         Me.Label57.Text = "Birthday"
         '
         'txtFirstname
@@ -462,7 +362,7 @@ Partial Class frmcreateuser
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtFirstname.Size = New System.Drawing.Size(172, 28)
-        Me.txtFirstname.TabIndex = 506
+        Me.txtFirstname.TabIndex = 434
         '
         'txtStreetAddress
         '
@@ -472,7 +372,7 @@ Partial Class frmcreateuser
         Me.txtStreetAddress.Name = "txtStreetAddress"
         Me.txtStreetAddress.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtStreetAddress.Size = New System.Drawing.Size(292, 28)
-        Me.txtStreetAddress.TabIndex = 529
+        Me.txtStreetAddress.TabIndex = 461
         '
         'Label58
         '
@@ -481,7 +381,7 @@ Partial Class frmcreateuser
         Me.Label58.Location = New System.Drawing.Point(306, 481)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(72, 19)
-        Me.Label58.TabIndex = 541
+        Me.Label58.TabIndex = 473
         Me.Label58.Text = "Birth Place"
         '
         'Label59
@@ -491,7 +391,7 @@ Partial Class frmcreateuser
         Me.Label59.Location = New System.Drawing.Point(8, 384)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(158, 19)
-        Me.Label59.TabIndex = 530
+        Me.Label59.TabIndex = 462
         Me.Label59.Text = "No/Blk Street Subdivision"
         '
         'Label60
@@ -501,7 +401,7 @@ Partial Class frmcreateuser
         Me.Label60.Location = New System.Drawing.Point(15, 288)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(65, 19)
-        Me.Label60.TabIndex = 509
+        Me.Label60.TabIndex = 437
         Me.Label60.Text = "Lastname"
         '
         'txtBirthPlace
@@ -512,7 +412,7 @@ Partial Class frmcreateuser
         Me.txtBirthPlace.Name = "txtBirthPlace"
         Me.txtBirthPlace.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtBirthPlace.Size = New System.Drawing.Size(338, 28)
-        Me.txtBirthPlace.TabIndex = 540
+        Me.txtBirthPlace.TabIndex = 472
         '
         'lblStreetAddressError
         '
@@ -521,7 +421,7 @@ Partial Class frmcreateuser
         Me.lblStreetAddressError.Location = New System.Drawing.Point(12, 437)
         Me.lblStreetAddressError.Name = "lblStreetAddressError"
         Me.lblStreetAddressError.Size = New System.Drawing.Size(15, 19)
-        Me.lblStreetAddressError.TabIndex = 528
+        Me.lblStreetAddressError.TabIndex = 460
         Me.lblStreetAddressError.Text = "-"
         '
         'lblBirthPlaceError
@@ -531,7 +431,7 @@ Partial Class frmcreateuser
         Me.lblBirthPlaceError.Location = New System.Drawing.Point(307, 534)
         Me.lblBirthPlaceError.Name = "lblBirthPlaceError"
         Me.lblBirthPlaceError.Size = New System.Drawing.Size(15, 19)
-        Me.lblBirthPlaceError.TabIndex = 542
+        Me.lblBirthPlaceError.TabIndex = 474
         Me.lblBirthPlaceError.Text = "-"
         '
         'txtLastname
@@ -542,7 +442,7 @@ Partial Class frmcreateuser
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtLastname.Size = New System.Drawing.Size(176, 28)
-        Me.txtLastname.TabIndex = 508
+        Me.txtLastname.TabIndex = 436
         '
         'Label63
         '
@@ -551,7 +451,7 @@ Partial Class frmcreateuser
         Me.Label63.Location = New System.Drawing.Point(549, 288)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(41, 19)
-        Me.Label63.TabIndex = 527
+        Me.Label63.TabIndex = 459
         Me.Label63.Text = "Suffix"
         '
         'cboCivilStatus
@@ -561,8 +461,8 @@ Partial Class frmcreateuser
         Me.cboCivilStatus.FormattingEnabled = True
         Me.cboCivilStatus.Location = New System.Drawing.Point(15, 597)
         Me.cboCivilStatus.Name = "cboCivilStatus"
-        Me.cboCivilStatus.Size = New System.Drawing.Size(173, 28)
-        Me.cboCivilStatus.TabIndex = 543
+        Me.cboCivilStatus.Size = New System.Drawing.Size(289, 28)
+        Me.cboCivilStatus.TabIndex = 475
         '
         'cboSuffix
         '
@@ -572,7 +472,7 @@ Partial Class frmcreateuser
         Me.cboSuffix.Location = New System.Drawing.Point(553, 312)
         Me.cboSuffix.Name = "cboSuffix"
         Me.cboSuffix.Size = New System.Drawing.Size(95, 28)
-        Me.cboSuffix.TabIndex = 526
+        Me.cboSuffix.TabIndex = 458
         '
         'Label65
         '
@@ -581,7 +481,7 @@ Partial Class frmcreateuser
         Me.Label65.Location = New System.Drawing.Point(10, 574)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(72, 19)
-        Me.Label65.TabIndex = 544
+        Me.Label65.TabIndex = 476
         Me.Label65.Text = "Civil Status"
         '
         'lblMiddlenameError
@@ -591,7 +491,7 @@ Partial Class frmcreateuser
         Me.lblMiddlenameError.Location = New System.Drawing.Point(371, 341)
         Me.lblMiddlenameError.Name = "lblMiddlenameError"
         Me.lblMiddlenameError.Size = New System.Drawing.Size(15, 19)
-        Me.lblMiddlenameError.TabIndex = 525
+        Me.lblMiddlenameError.TabIndex = 457
         Me.lblMiddlenameError.Text = "-"
         '
         'Label67
@@ -601,7 +501,7 @@ Partial Class frmcreateuser
         Me.Label67.Location = New System.Drawing.Point(10, 647)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(15, 19)
-        Me.Label67.TabIndex = 545
+        Me.Label67.TabIndex = 477
         Me.Label67.Text = "-"
         '
         'txtMiddlename
@@ -612,17 +512,17 @@ Partial Class frmcreateuser
         Me.txtMiddlename.Name = "txtMiddlename"
         Me.txtMiddlename.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtMiddlename.Size = New System.Drawing.Size(172, 28)
-        Me.txtMiddlename.TabIndex = 523
+        Me.txtMiddlename.TabIndex = 455
         '
         'cboGender
         '
         Me.cboGender.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboGender.Font = New System.Drawing.Font("Microsoft YaHei UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboGender.FormattingEnabled = True
-        Me.cboGender.Location = New System.Drawing.Point(194, 597)
+        Me.cboGender.Location = New System.Drawing.Point(310, 597)
         Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(175, 28)
-        Me.cboGender.TabIndex = 546
+        Me.cboGender.Size = New System.Drawing.Size(338, 28)
+        Me.cboGender.TabIndex = 478
         '
         'Label68
         '
@@ -631,7 +531,7 @@ Partial Class frmcreateuser
         Me.Label68.Location = New System.Drawing.Point(371, 288)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(84, 19)
-        Me.Label68.TabIndex = 524
+        Me.Label68.TabIndex = 456
         Me.Label68.Text = "Middlename"
         '
         'lblFirstnameError
@@ -641,7 +541,7 @@ Partial Class frmcreateuser
         Me.lblFirstnameError.Location = New System.Drawing.Point(196, 341)
         Me.lblFirstnameError.Name = "lblFirstnameError"
         Me.lblFirstnameError.Size = New System.Drawing.Size(15, 19)
-        Me.lblFirstnameError.TabIndex = 518
+        Me.lblFirstnameError.TabIndex = 449
         Me.lblFirstnameError.Text = "-"
         '
         'Label70
@@ -652,17 +552,17 @@ Partial Class frmcreateuser
         Me.Label70.Location = New System.Drawing.Point(14, 257)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(182, 22)
-        Me.Label70.TabIndex = 549
+        Me.Label70.TabIndex = 481
         Me.Label70.Text = "Personal Information"
         '
         'Label71
         '
         Me.Label71.AutoSize = True
         Me.Label71.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(190, 575)
+        Me.Label71.Location = New System.Drawing.Point(306, 575)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(53, 19)
-        Me.Label71.TabIndex = 547
+        Me.Label71.TabIndex = 479
         Me.Label71.Text = "Gender"
         '
         'lblLastnameError
@@ -672,7 +572,7 @@ Partial Class frmcreateuser
         Me.lblLastnameError.Location = New System.Drawing.Point(15, 341)
         Me.lblLastnameError.Name = "lblLastnameError"
         Me.lblLastnameError.Size = New System.Drawing.Size(15, 19)
-        Me.lblLastnameError.TabIndex = 519
+        Me.lblLastnameError.TabIndex = 450
         Me.lblLastnameError.Text = "-"
         '
         'lblEmailError
@@ -682,7 +582,7 @@ Partial Class frmcreateuser
         Me.lblEmailError.Location = New System.Drawing.Point(309, 717)
         Me.lblEmailError.Name = "lblEmailError"
         Me.lblEmailError.Size = New System.Drawing.Size(15, 19)
-        Me.lblEmailError.TabIndex = 522
+        Me.lblEmailError.TabIndex = 454
         Me.lblEmailError.Text = "-"
         '
         'Label74
@@ -692,17 +592,17 @@ Partial Class frmcreateuser
         Me.Label74.Location = New System.Drawing.Point(309, 664)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(41, 19)
-        Me.Label74.TabIndex = 521
+        Me.Label74.TabIndex = 453
         Me.Label74.Text = "Email"
         '
         'Label75
         '
         Me.Label75.AutoSize = True
         Me.Label75.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.Location = New System.Drawing.Point(195, 628)
+        Me.Label75.Location = New System.Drawing.Point(311, 628)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(15, 19)
-        Me.Label75.TabIndex = 548
+        Me.Label75.TabIndex = 480
         Me.Label75.Text = "-"
         '
         'txtEmail
@@ -713,46 +613,110 @@ Partial Class frmcreateuser
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtEmail.Size = New System.Drawing.Size(338, 28)
-        Me.txtEmail.TabIndex = 520
+        Me.txtEmail.TabIndex = 452
         '
-        'cboRole
+        'Label6
         '
-        Me.cboRole.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.cboRole.Font = New System.Drawing.Font("Microsoft YaHei UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboRole.FormattingEnabled = True
-        Me.cboRole.Location = New System.Drawing.Point(375, 597)
-        Me.cboRole.Name = "cboRole"
-        Me.cboRole.Size = New System.Drawing.Size(271, 28)
-        Me.cboRole.TabIndex = 565
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(444, 127)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(36, 19)
+        Me.Label6.TabIndex = 504
+        Me.Label6.Text = "Back"
         '
-        'Label7
+        'Label1
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(371, 575)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(35, 19)
-        Me.Label7.TabIndex = 566
-        Me.Label7.Text = "Role"
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(233, 127)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(41, 19)
+        Me.Label1.TabIndex = 503
+        Me.Label1.Text = "Front"
         '
-        'Label8
+        'picIDBack
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(376, 628)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(15, 19)
-        Me.Label8.TabIndex = 567
-        Me.Label8.Text = "-"
+        Me.picIDBack.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.picIDBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.picIDBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picIDBack.Location = New System.Drawing.Point(441, 124)
+        Me.picIDBack.Name = "picIDBack"
+        Me.picIDBack.Size = New System.Drawing.Size(205, 105)
+        Me.picIDBack.TabIndex = 502
+        Me.picIDBack.TabStop = False
         '
-        'frmcreateuser
+        'picUser
+        '
+        Me.picUser.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.picUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picUser.Location = New System.Drawing.Point(19, 124)
+        Me.picUser.Name = "picUser"
+        Me.picUser.Size = New System.Drawing.Size(205, 105)
+        Me.picUser.TabIndex = 501
+        Me.picUser.TabStop = False
+        '
+        'lblPictureError
+        '
+        Me.lblPictureError.AutoSize = True
+        Me.lblPictureError.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPictureError.Location = New System.Drawing.Point(10, 102)
+        Me.lblPictureError.Name = "lblPictureError"
+        Me.lblPictureError.Size = New System.Drawing.Size(168, 19)
+        Me.lblPictureError.TabIndex = 500
+        Me.lblPictureError.Text = "Please upload clear image."
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Navy
+        Me.Label2.Location = New System.Drawing.Point(10, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(126, 22)
+        Me.Label2.TabIndex = 499
+        Me.Label2.Text = "Profile Picture"
+        '
+        'picIDFront
+        '
+        Me.picIDFront.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.picIDFront.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.picIDFront.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picIDFront.Location = New System.Drawing.Point(230, 124)
+        Me.picIDFront.Name = "picIDFront"
+        Me.picIDFront.Size = New System.Drawing.Size(205, 105)
+        Me.picIDFront.TabIndex = 496
+        Me.picIDFront.TabStop = False
+        '
+        'lblIdError
+        '
+        Me.lblIdError.AutoSize = True
+        Me.lblIdError.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdError.Location = New System.Drawing.Point(228, 102)
+        Me.lblIdError.Name = "lblIdError"
+        Me.lblIdError.Size = New System.Drawing.Size(266, 19)
+        Me.lblIdError.TabIndex = 498
+        Me.lblIdError.Text = "Please upload a valid form of identification."
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.ForeColor = System.Drawing.Color.Navy
+        Me.Label50.Location = New System.Drawing.Point(228, 80)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(118, 22)
+        Me.Label50.TabIndex = 497
+        Me.Label50.Text = "Identification"
+        '
+        'Barangay_Residences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(660, 989)
-        Me.Controls.Add(Me.cboRole)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.picIDBack)
@@ -815,9 +779,9 @@ Partial Class frmcreateuser
         Me.Controls.Add(Me.txtEmail)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmcreateuser"
+        Me.Name = "Barangay_Residences"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmcreateuser"
+        Me.Text = "Barangay_Residences"
         CType(Me.picIDBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picIDFront, System.ComponentModel.ISupportInitialize).EndInit()
@@ -826,15 +790,6 @@ Partial Class frmcreateuser
 
     End Sub
 
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents picIDBack As PictureBox
-    Friend WithEvents picUser As PictureBox
-    Friend WithEvents lblPictureError As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents picIDFront As PictureBox
-    Friend WithEvents lblIdError As Label
-    Friend WithEvents Label50 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents lblStaffCode As Label
     Friend WithEvents Label4 As Label
@@ -886,7 +841,13 @@ Partial Class frmcreateuser
     Friend WithEvents Label74 As Label
     Friend WithEvents Label75 As Label
     Friend WithEvents txtEmail As TextBox
-    Friend WithEvents cboRole As ComboBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents picIDBack As PictureBox
+    Friend WithEvents picUser As PictureBox
+    Friend WithEvents lblPictureError As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents picIDFront As PictureBox
+    Friend WithEvents lblIdError As Label
+    Friend WithEvents Label50 As Label
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmMain
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmResidenceMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,10 @@ Partial Class frmMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmResidenceMain))
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblUserRole = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -35,10 +36,18 @@ Partial Class frmMain
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Menupanel.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(54, 48)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1312, 720)
+        Me.Panel2.TabIndex = 6
         '
         'Panel1
         '
@@ -50,7 +59,7 @@ Partial Class frmMain
         Me.Panel1.Location = New System.Drawing.Point(54, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1312, 48)
-        Me.Panel1.TabIndex = 0
+        Me.Panel1.TabIndex = 4
         '
         'lblUserRole
         '
@@ -113,7 +122,7 @@ Partial Class frmMain
         Me.Menupanel.Location = New System.Drawing.Point(0, 0)
         Me.Menupanel.Name = "Menupanel"
         Me.Menupanel.Size = New System.Drawing.Size(54, 768)
-        Me.Menupanel.TabIndex = 2
+        Me.Menupanel.TabIndex = 5
         '
         'BtnAddDoc
         '
@@ -241,16 +250,7 @@ Partial Class frmMain
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(54, 48)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1312, 720)
-        Me.Panel2.TabIndex = 3
-        '
-        'frmMain
+        'frmResidenceMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -260,10 +260,9 @@ Partial Class frmMain
         Me.Controls.Add(Me.Menupanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmMain"
+        Me.Name = "frmResidenceMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmMain"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Text = "frmResidenceMain"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Menupanel.ResumeLayout(False)
@@ -271,17 +270,17 @@ Partial Class frmMain
 
     End Sub
 
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblUserRole As Label
+    Friend WithEvents Button1 As Button
     Friend WithEvents btnClose As Button
     Friend WithEvents Menupanel As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents BtnAddDoc As Button
+    Friend WithEvents btnAppointment As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents lblUserRole As Label
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents btnAppointment As Button
-    Friend WithEvents BtnAddDoc As Button
+    Friend WithEvents Button2 As Button
 End Class

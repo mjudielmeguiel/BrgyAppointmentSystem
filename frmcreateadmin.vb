@@ -2,7 +2,7 @@
 
 Public Class frmcreateadmin
 
-    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) 
         If txtDepartment.Text = "" Or txtLastname.Text = "" Or txtFirstname.Text = "" Or txtUsername.Text = "" Or txtPassword.Text = "" Or txtConfirmPass.Text = "" Then
             MsgBox("Please fill all fields including Department!", MsgBoxStyle.Exclamation)
             Exit Sub

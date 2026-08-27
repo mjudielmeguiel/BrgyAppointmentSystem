@@ -77,35 +77,11 @@ Public Class frmMain
         Me.TopMost = False
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        frmChangePassword.Show()
-        frmChangePassword.TopMost = True
-
-        Me.TopMost = False
-
+    Private Sub BtnAddDoc_Click(sender As Object, e As EventArgs) Handles BtnAddDoc.Click
+        frmDocumentServices.Show()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Panel2.Controls.Clear()
-        Dim Records As New frmRecords
-        Records.TopLevel = False
-        Records.FormBorderStyle = FormBorderStyle.None
-        Records.Dock = DockStyle.Fill
-        Panel2.Controls.Add(Records)
-        Records.Show()
-    End Sub
-
-    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnAppointment.Click
-        Panel2.Controls.Clear()
-        Dim Appointment As New frmAppointment_List
-        Appointment.TopLevel = False
-        Appointment.FormBorderStyle = FormBorderStyle.None
-        Appointment.Dock = DockStyle.Fill
-        Panel2.Controls.Add(Appointment)
-        Appointment.Show()
-    End Sub
-
-    Private Sub BtnAddDoc_Click(sender As Object, e As EventArgs) Handles BtnAddDoc.Click
-        frmDocumentServices.Show()
+        Barangay_Residences.Show()
     End Sub
 End Class

@@ -15,6 +15,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -114,6 +116,9 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="Tesseract, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tesseract.5.2.0\lib\net48\Tesseract.dll</HintPath>
+    </Reference>
     <Reference Include="ZstdSharp, Version=0.8.6.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>packages\ZstdSharp.Port.0.8.6\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
@@ -132,6 +137,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RESIDENCE RECORD\Barangay_Residences.Designer.vb">
+      <DependentUpon>Barangay_Residences.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RESIDENCE RECORD\Barangay_Residences.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ADMIN\frmAdmin_Dashboard.Designer.vb">
       <DependentUpon>frmAdmin_Dashboard.vb</DependentUpon>
     </Compile>
@@ -144,47 +155,35 @@
     <Compile Include="ADMIN\User Manager\frmUserInformation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="USERS\Book Apointment\frmBook.Designer.vb">
-      <DependentUpon>frmBook.vb</DependentUpon>
-    </Compile>
-    <Compile Include="USERS\Book Apointment\frmBook.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="USERS\Book Apointment\frmBookAppointment.Designer.vb">
-      <DependentUpon>frmBookAppointment.vb</DependentUpon>
-    </Compile>
-    <Compile Include="USERS\Book Apointment\frmBookAppointment.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DBconnection.vb" />
-    <Compile Include="USERS\frmAppointment_List.Designer.vb">
-      <DependentUpon>frmAppointment_List.vb</DependentUpon>
-    </Compile>
-    <Compile Include="USERS\frmAppointment_List.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GENERAL\frmChangePassword.Designer.vb">
-      <DependentUpon>frmChangePassword.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GENERAL\frmChangePassword.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ADMIN\frmDocumentServices.Designer.vb">
       <DependentUpon>frmDocumentServices.vb</DependentUpon>
     </Compile>
     <Compile Include="ADMIN\frmDocumentServices.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RESIDENCE RECORD\ResidenceList.Designer.vb">
+      <DependentUpon>ResidenceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RESIDENCE RECORD\ResidenceList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USERS\frmCreateAppointment.Designer.vb">
+      <DependentUpon>frmCreateAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="USERS\frmCreateAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USERS\frmResidenceMain.Designer.vb">
+      <DependentUpon>frmResidenceMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="USERS\frmResidenceMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="USERS\frmUser_Dashboard.Designer.vb">
       <DependentUpon>frmUser_Dashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="USERS\frmUser_Dashboard.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GENERAL\frmRecords.Designer.vb">
-      <DependentUpon>frmRecords.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GENERAL\frmRecords.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ADMIN\User Manager\frmManage_Users.Designer.vb">
@@ -235,32 +234,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RESIDENCE RECORD\Barangay_Residences.resx">
+      <DependentUpon>Barangay_Residences.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ADMIN\frmAdmin_Dashboard.resx">
       <DependentUpon>frmAdmin_Dashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ADMIN\User Manager\frmUserInformation.resx">
       <DependentUpon>frmUserInformation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="USERS\Book Apointment\frmBook.resx">
-      <DependentUpon>frmBook.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="USERS\Book Apointment\frmBookAppointment.resx">
-      <DependentUpon>frmBookAppointment.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="USERS\frmAppointment_List.resx">
-      <DependentUpon>frmAppointment_List.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GENERAL\frmChangePassword.resx">
-      <DependentUpon>frmChangePassword.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ADMIN\frmDocumentServices.resx">
       <DependentUpon>frmDocumentServices.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RESIDENCE RECORD\ResidenceList.resx">
+      <DependentUpon>ResidenceList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERS\frmCreateAppointment.resx">
+      <DependentUpon>frmCreateAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERS\frmResidenceMain.resx">
+      <DependentUpon>frmResidenceMain.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="USERS\frmUser_Dashboard.resx">
       <DependentUpon>frmUser_Dashboard.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GENERAL\frmRecords.resx">
-      <DependentUpon>frmRecords.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ADMIN\User Manager\frmManage_Users.resx">
       <DependentUpon>frmManage_Users.vb</DependentUpon>
@@ -297,6 +293,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="USERS\Book Apointment\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="packages\Tesseract.5.2.0\build\Tesseract.targets" Condition="Exists('packages\Tesseract.5.2.0\build\Tesseract.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Tesseract.5.2.0\build\Tesseract.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Tesseract.5.2.0\build\Tesseract.targets'))" />
+  </Target>
 </Project>

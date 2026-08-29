@@ -84,4 +84,24 @@ Public Class frmMain
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Barangay_Residences.Show()
     End Sub
+
+    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnAppointment.Click
+        Panel2.Controls.Clear()
+        Dim Calendar As New frmBarangayCalendar
+        Calendar.TopLevel = False
+        Calendar.FormBorderStyle = FormBorderStyle.None
+        Calendar.Dock = DockStyle.Fill
+        Panel2.Controls.Add(Calendar)
+        Calendar.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Panel2.Controls.Clear()
+        Dim History As New frmAppointmentHistory
+        History.TopLevel = False
+        History.FormBorderStyle = FormBorderStyle.None
+        History.Dock = DockStyle.Fill
+        Panel2.Controls.Add(History)
+        History.Show()
+    End Sub
 End Class

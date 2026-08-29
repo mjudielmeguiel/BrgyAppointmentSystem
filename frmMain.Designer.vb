@@ -36,6 +36,7 @@ Partial Class frmMain
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Menupanel.SuspendLayout()
         Me.SuspendLayout()
@@ -102,6 +103,7 @@ Partial Class frmMain
         'Menupanel
         '
         Me.Menupanel.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Menupanel.Controls.Add(Me.Button6)
         Me.Menupanel.Controls.Add(Me.BtnAddDoc)
         Me.Menupanel.Controls.Add(Me.btnAppointment)
         Me.Menupanel.Controls.Add(Me.Button4)
@@ -250,6 +252,24 @@ Partial Class frmMain
         Me.Panel2.Size = New System.Drawing.Size(1312, 720)
         Me.Panel2.TabIndex = 3
         '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Location = New System.Drawing.Point(0, 273)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(54, 39)
+        Me.Button6.TabIndex = 152
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button6.UseVisualStyleBackColor = False
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -284,4 +304,5 @@ Partial Class frmMain
     Friend WithEvents Button4 As Button
     Friend WithEvents btnAppointment As Button
     Friend WithEvents BtnAddDoc As Button
+    Friend WithEvents Button6 As Button
 End Class

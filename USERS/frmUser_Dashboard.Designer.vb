@@ -37,7 +37,6 @@ Partial Class frmUser_Dashboard
         Me.dgvRequests = New System.Windows.Forms.DataGridView()
         Me.btnCreateRequest = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.picUserProfile = New System.Windows.Forms.PictureBox()
         Me.lblCivilStatus = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.lblGender = New System.Windows.Forms.Label()
@@ -51,6 +50,7 @@ Partial Class frmUser_Dashboard
         Me.lblEmailInfo = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.lblFullName = New System.Windows.Forms.Label()
+        Me.picUserProfile = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -140,9 +140,9 @@ Partial Class frmUser_Dashboard
         Me.Panel7.Controls.Add(Me.Label5)
         Me.Panel7.Controls.Add(Me.dgvRequests)
         Me.Panel7.Controls.Add(Me.btnCreateRequest)
-        Me.Panel7.Location = New System.Drawing.Point(410, 183)
+        Me.Panel7.Location = New System.Drawing.Point(410, 251)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(911, 552)
+        Me.Panel7.Size = New System.Drawing.Size(911, 484)
         Me.Panel7.TabIndex = 522
         '
         'btnRef
@@ -208,7 +208,7 @@ Partial Class frmUser_Dashboard
         Me.dgvRequests.Location = New System.Drawing.Point(0, 99)
         Me.dgvRequests.Name = "dgvRequests"
         Me.dgvRequests.ReadOnly = True
-        Me.dgvRequests.Size = New System.Drawing.Size(909, 451)
+        Me.dgvRequests.Size = New System.Drawing.Size(909, 383)
         Me.dgvRequests.TabIndex = 508
         '
         'btnCreateRequest
@@ -233,7 +233,6 @@ Partial Class frmUser_Dashboard
         Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.picUserProfile)
         Me.Panel5.Controls.Add(Me.lblCivilStatus)
         Me.Panel5.Controls.Add(Me.Label21)
         Me.Panel5.Controls.Add(Me.lblGender)
@@ -247,26 +246,16 @@ Partial Class frmUser_Dashboard
         Me.Panel5.Controls.Add(Me.lblEmailInfo)
         Me.Panel5.Controls.Add(Me.Label10)
         Me.Panel5.Controls.Add(Me.lblFullName)
-        Me.Panel5.Location = New System.Drawing.Point(89, 183)
+        Me.Panel5.Location = New System.Drawing.Point(89, 251)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(315, 552)
+        Me.Panel5.Size = New System.Drawing.Size(315, 484)
         Me.Panel5.TabIndex = 519
-        '
-        'picUserProfile
-        '
-        Me.picUserProfile.Image = CType(resources.GetObject("picUserProfile.Image"), System.Drawing.Image)
-        Me.picUserProfile.Location = New System.Drawing.Point(70, 12)
-        Me.picUserProfile.Name = "picUserProfile"
-        Me.picUserProfile.Size = New System.Drawing.Size(118, 104)
-        Me.picUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picUserProfile.TabIndex = 521
-        Me.picUserProfile.TabStop = False
         '
         'lblCivilStatus
         '
         Me.lblCivilStatus.AutoSize = True
         Me.lblCivilStatus.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCivilStatus.Location = New System.Drawing.Point(24, 510)
+        Me.lblCivilStatus.Location = New System.Drawing.Point(24, 428)
         Me.lblCivilStatus.Name = "lblCivilStatus"
         Me.lblCivilStatus.Size = New System.Drawing.Size(15, 19)
         Me.lblCivilStatus.TabIndex = 532
@@ -277,7 +266,7 @@ Partial Class frmUser_Dashboard
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label21.Location = New System.Drawing.Point(24, 491)
+        Me.Label21.Location = New System.Drawing.Point(24, 409)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(77, 19)
         Me.Label21.TabIndex = 531
@@ -287,7 +276,7 @@ Partial Class frmUser_Dashboard
         '
         Me.lblGender.AutoSize = True
         Me.lblGender.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGender.Location = New System.Drawing.Point(24, 443)
+        Me.lblGender.Location = New System.Drawing.Point(24, 376)
         Me.lblGender.Name = "lblGender"
         Me.lblGender.Size = New System.Drawing.Size(15, 19)
         Me.lblGender.TabIndex = 530
@@ -298,7 +287,7 @@ Partial Class frmUser_Dashboard
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label19.Location = New System.Drawing.Point(24, 424)
+        Me.Label19.Location = New System.Drawing.Point(24, 357)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(54, 19)
         Me.Label19.TabIndex = 529
@@ -308,7 +297,7 @@ Partial Class frmUser_Dashboard
         '
         Me.lblBirthplace.AutoSize = True
         Me.lblBirthplace.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBirthplace.Location = New System.Drawing.Point(24, 386)
+        Me.lblBirthplace.Location = New System.Drawing.Point(24, 321)
         Me.lblBirthplace.Name = "lblBirthplace"
         Me.lblBirthplace.Size = New System.Drawing.Size(15, 19)
         Me.lblBirthplace.TabIndex = 528
@@ -319,7 +308,7 @@ Partial Class frmUser_Dashboard
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label17.Location = New System.Drawing.Point(24, 367)
+        Me.Label17.Location = New System.Drawing.Point(24, 302)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(70, 19)
         Me.Label17.TabIndex = 527
@@ -329,7 +318,7 @@ Partial Class frmUser_Dashboard
         '
         Me.lblBirthday.AutoSize = True
         Me.lblBirthday.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBirthday.Location = New System.Drawing.Point(24, 322)
+        Me.lblBirthday.Location = New System.Drawing.Point(24, 262)
         Me.lblBirthday.Name = "lblBirthday"
         Me.lblBirthday.Size = New System.Drawing.Size(15, 19)
         Me.lblBirthday.TabIndex = 526
@@ -340,7 +329,7 @@ Partial Class frmUser_Dashboard
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label14.Location = New System.Drawing.Point(24, 303)
+        Me.Label14.Location = New System.Drawing.Point(24, 243)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(60, 19)
         Me.Label14.TabIndex = 525
@@ -350,7 +339,7 @@ Partial Class frmUser_Dashboard
         '
         Me.lblContactNumber.AutoSize = True
         Me.lblContactNumber.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblContactNumber.Location = New System.Drawing.Point(24, 258)
+        Me.lblContactNumber.Location = New System.Drawing.Point(24, 212)
         Me.lblContactNumber.Name = "lblContactNumber"
         Me.lblContactNumber.Size = New System.Drawing.Size(15, 19)
         Me.lblContactNumber.TabIndex = 522
@@ -361,7 +350,7 @@ Partial Class frmUser_Dashboard
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label13.Location = New System.Drawing.Point(24, 239)
+        Me.Label13.Location = New System.Drawing.Point(24, 193)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(113, 19)
         Me.Label13.TabIndex = 523
@@ -371,7 +360,7 @@ Partial Class frmUser_Dashboard
         '
         Me.lblEmailInfo.AutoSize = True
         Me.lblEmailInfo.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmailInfo.Location = New System.Drawing.Point(24, 196)
+        Me.lblEmailInfo.Location = New System.Drawing.Point(24, 150)
         Me.lblEmailInfo.Name = "lblEmailInfo"
         Me.lblEmailInfo.Size = New System.Drawing.Size(15, 19)
         Me.lblEmailInfo.TabIndex = 521
@@ -382,7 +371,7 @@ Partial Class frmUser_Dashboard
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label10.Location = New System.Drawing.Point(24, 177)
+        Me.Label10.Location = New System.Drawing.Point(24, 131)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(118, 19)
         Me.Label10.TabIndex = 521
@@ -393,12 +382,22 @@ Partial Class frmUser_Dashboard
         Me.lblFullName.AutoSize = True
         Me.lblFullName.Font = New System.Drawing.Font("Microsoft YaHei UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFullName.ForeColor = System.Drawing.Color.Navy
-        Me.lblFullName.Location = New System.Drawing.Point(24, 130)
+        Me.lblFullName.Location = New System.Drawing.Point(24, 99)
         Me.lblFullName.Name = "lblFullName"
         Me.lblFullName.Size = New System.Drawing.Size(211, 19)
         Me.lblFullName.TabIndex = 177
         Me.lblFullName.Text = "Mescallado, Judiel Meguiel"
         Me.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'picUserProfile
+        '
+        Me.picUserProfile.Image = CType(resources.GetObject("picUserProfile.Image"), System.Drawing.Image)
+        Me.picUserProfile.Location = New System.Drawing.Point(163, 183)
+        Me.picUserProfile.Name = "picUserProfile"
+        Me.picUserProfile.Size = New System.Drawing.Size(151, 150)
+        Me.picUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picUserProfile.TabIndex = 521
+        Me.picUserProfile.TabStop = False
         '
         'Panel4
         '
@@ -446,11 +445,11 @@ Partial Class frmUser_Dashboard
         '
         Me.lblDateTime.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblDateTime.AutoSize = True
-        Me.lblDateTime.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDateTime.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDateTime.ForeColor = System.Drawing.Color.Navy
-        Me.lblDateTime.Location = New System.Drawing.Point(909, 113)
+        Me.lblDateTime.Location = New System.Drawing.Point(917, 116)
         Me.lblDateTime.Name = "lblDateTime"
-        Me.lblDateTime.Size = New System.Drawing.Size(153, 26)
+        Me.lblDateTime.Size = New System.Drawing.Size(128, 22)
         Me.lblDateTime.TabIndex = 520
         Me.lblDateTime.Text = "Date and Time"
         '
@@ -487,6 +486,7 @@ Partial Class frmUser_Dashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1366, 768)
+        Me.Controls.Add(Me.picUserProfile)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblWelcomeUser)
         Me.Controls.Add(Me.lblCancelled)

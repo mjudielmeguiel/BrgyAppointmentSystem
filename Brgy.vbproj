@@ -137,6 +137,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAppointmentHistory.Designer.vb">
+      <DependentUpon>frmAppointmentHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAppointmentHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RESIDENCE RECORD\Barangay_Residences.Designer.vb">
       <DependentUpon>Barangay_Residences.vb</DependentUpon>
     </Compile>
@@ -168,10 +174,28 @@
     <Compile Include="RESIDENCE RECORD\ResidenceList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="USERS\frmAppointmentDetails.Designer.vb">
+      <DependentUpon>frmAppointmentDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="USERS\frmAppointmentDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USERS\frmBarangayCalendar.Designer.vb">
+      <DependentUpon>frmBarangayCalendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="USERS\frmBarangayCalendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="USERS\frmCreateAppointment.Designer.vb">
       <DependentUpon>frmCreateAppointment.vb</DependentUpon>
     </Compile>
     <Compile Include="USERS\frmCreateAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USERS\frmDayAppointmentsList.Designer.vb">
+      <DependentUpon>frmDayAppointmentsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="USERS\frmDayAppointmentsList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="USERS\frmResidenceMain.Designer.vb">
@@ -234,6 +258,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAppointmentHistory.resx">
+      <DependentUpon>frmAppointmentHistory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RESIDENCE RECORD\Barangay_Residences.resx">
       <DependentUpon>Barangay_Residences.vb</DependentUpon>
     </EmbeddedResource>
@@ -249,8 +276,17 @@
     <EmbeddedResource Include="RESIDENCE RECORD\ResidenceList.resx">
       <DependentUpon>ResidenceList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="USERS\frmAppointmentDetails.resx">
+      <DependentUpon>frmAppointmentDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERS\frmBarangayCalendar.resx">
+      <DependentUpon>frmBarangayCalendar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="USERS\frmCreateAppointment.resx">
       <DependentUpon>frmCreateAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERS\frmDayAppointmentsList.resx">
+      <DependentUpon>frmDayAppointmentsList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="USERS\frmResidenceMain.resx">
       <DependentUpon>frmResidenceMain.vb</DependentUpon>

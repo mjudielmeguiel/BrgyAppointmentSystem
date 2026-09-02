@@ -143,6 +143,12 @@
     <Compile Include="frmAppointmentHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RESIDENCE RECORD\Barangay_Residences.Designer.vb">
       <DependentUpon>Barangay_Residences.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,12 @@
       <DependentUpon>frmDocumentServices.vb</DependentUpon>
     </Compile>
     <Compile Include="ADMIN\frmDocumentServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RESIDENCE RECORD\frmResidence_Records.Designer.vb">
+      <DependentUpon>frmResidence_Records.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RESIDENCE RECORD\frmResidence_Records.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RESIDENCE RECORD\ResidenceList.Designer.vb">
@@ -196,12 +208,6 @@
       <DependentUpon>frmDayAppointmentsList.vb</DependentUpon>
     </Compile>
     <Compile Include="USERS\frmDayAppointmentsList.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="USERS\frmResidenceMain.Designer.vb">
-      <DependentUpon>frmResidenceMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="USERS\frmResidenceMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="USERS\frmUser_Dashboard.Designer.vb">
@@ -261,6 +267,9 @@
     <EmbeddedResource Include="frmAppointmentHistory.resx">
       <DependentUpon>frmAppointmentHistory.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RESIDENCE RECORD\Barangay_Residences.resx">
       <DependentUpon>Barangay_Residences.vb</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADMIN\frmDocumentServices.resx">
       <DependentUpon>frmDocumentServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RESIDENCE RECORD\frmResidence_Records.resx">
+      <DependentUpon>frmResidence_Records.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RESIDENCE RECORD\ResidenceList.resx">
       <DependentUpon>ResidenceList.vb</DependentUpon>
@@ -287,9 +299,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="USERS\frmDayAppointmentsList.resx">
       <DependentUpon>frmDayAppointmentsList.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="USERS\frmResidenceMain.resx">
-      <DependentUpon>frmResidenceMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="USERS\frmUser_Dashboard.resx">
       <DependentUpon>frmUser_Dashboard.vb</DependentUpon>

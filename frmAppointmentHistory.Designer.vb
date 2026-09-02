@@ -39,8 +39,8 @@ Partial Class frmAppointmentHistory
         Me.dgvHistory = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.dtpAppointmentTime = New System.Windows.Forms.DateTimePicker()
-        Me.dtpFilterDate = New System.Windows.Forms.DateTimePicker()
+        Me.dtpToDate = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFromDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cboStatusFilter = New System.Windows.Forms.ComboBox()
         Me.txtSearchControlNo = New System.Windows.Forms.TextBox()
@@ -210,9 +210,9 @@ Partial Class frmAppointmentHistory
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(346, 172)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(118, 19)
+        Me.Label8.Size = New System.Drawing.Size(24, 19)
         Me.Label8.TabIndex = 606
-        Me.Label8.Text = "Appointment time"
+        Me.Label8.Text = "To"
         '
         'Label7
         '
@@ -220,31 +220,31 @@ Partial Class frmAppointmentHistory
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(51, 172)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(119, 19)
+        Me.Label7.Size = New System.Drawing.Size(41, 19)
         Me.Label7.TabIndex = 605
-        Me.Label7.Text = "Appointment Date"
+        Me.Label7.Text = "From"
         '
-        'dtpAppointmentTime
+        'dtpToDate
         '
-        Me.dtpAppointmentTime.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpAppointmentTime.Location = New System.Drawing.Point(350, 194)
-        Me.dtpAppointmentTime.Name = "dtpAppointmentTime"
-        Me.dtpAppointmentTime.Size = New System.Drawing.Size(289, 28)
-        Me.dtpAppointmentTime.TabIndex = 604
+        Me.dtpToDate.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpToDate.Location = New System.Drawing.Point(350, 194)
+        Me.dtpToDate.Name = "dtpToDate"
+        Me.dtpToDate.Size = New System.Drawing.Size(289, 28)
+        Me.dtpToDate.TabIndex = 604
         '
-        'dtpFilterDate
+        'dtpFromDate
         '
-        Me.dtpFilterDate.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFilterDate.Location = New System.Drawing.Point(55, 194)
-        Me.dtpFilterDate.Name = "dtpFilterDate"
-        Me.dtpFilterDate.Size = New System.Drawing.Size(289, 28)
-        Me.dtpFilterDate.TabIndex = 603
+        Me.dtpFromDate.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFromDate.Location = New System.Drawing.Point(55, 194)
+        Me.dtpFromDate.Name = "dtpFromDate"
+        Me.dtpFromDate.Size = New System.Drawing.Size(289, 28)
+        Me.dtpFromDate.TabIndex = 603
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(754, 150)
+        Me.Label4.Location = New System.Drawing.Point(848, 172)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 19)
         Me.Label4.TabIndex = 608
@@ -255,7 +255,7 @@ Partial Class frmAppointmentHistory
         Me.cboStatusFilter.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.cboStatusFilter.Font = New System.Drawing.Font("Microsoft YaHei UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboStatusFilter.FormattingEnabled = True
-        Me.cboStatusFilter.Location = New System.Drawing.Point(754, 172)
+        Me.cboStatusFilter.Location = New System.Drawing.Point(848, 194)
         Me.cboStatusFilter.Name = "cboStatusFilter"
         Me.cboStatusFilter.Size = New System.Drawing.Size(506, 28)
         Me.cboStatusFilter.TabIndex = 607
@@ -292,8 +292,8 @@ Partial Class frmAppointmentHistory
         Me.Controls.Add(Me.cboStatusFilter)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.dtpAppointmentTime)
-        Me.Controls.Add(Me.dtpFilterDate)
+        Me.Controls.Add(Me.dtpToDate)
+        Me.Controls.Add(Me.dtpFromDate)
         Me.Controls.Add(Me.dgvHistory)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.btnPrevMonth)
@@ -331,8 +331,8 @@ Partial Class frmAppointmentHistory
     Friend WithEvents Label3 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents dtpAppointmentTime As DateTimePicker
-    Friend WithEvents dtpFilterDate As DateTimePicker
+    Friend WithEvents dtpToDate As DateTimePicker
+    Friend WithEvents dtpFromDate As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents cboStatusFilter As ComboBox
     Friend WithEvents txtSearchControlNo As TextBox

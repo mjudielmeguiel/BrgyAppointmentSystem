@@ -15,14 +15,12 @@ Public Class frmDayAppointmentsList
         LoadDailyAppointments()
     End Sub
 
-    ' --- CONFIGURE LISTVIEW COLUMNS AND STYLE ---
     Private Sub SetupListView()
         lvwAppointments.View = View.Details
         lvwAppointments.FullRowSelect = True
         lvwAppointments.GridLines = True
         lvwAppointments.Columns.Clear()
 
-        ' Columns: Control No | Pick-up Time | Resident Name | Request Type | Status
         lvwAppointments.Columns.Add("Control No.", 110)
         lvwAppointments.Columns.Add("Pick-up Time", 110)
         lvwAppointments.Columns.Add("Resident Name", 200)
@@ -30,7 +28,6 @@ Public Class frmDayAppointmentsList
         lvwAppointments.Columns.Add("Status", 100)
     End Sub
 
-    ' --- LOAD DAILY PICK-UP LIST FROM DATABASE ---
     Private Sub LoadDailyAppointments()
         lvwAppointments.Items.Clear()
 
@@ -73,10 +70,8 @@ Public Class frmDayAppointmentsList
         End Try
     End Sub
 
-    ' --- CREATE NEW APPOINTMENT BUTTON ---
     Private Sub btnNewAppointment_Click(sender As Object, e As EventArgs) Handles btnNewAppointment.Click
         Using frmCreate As New frmCreateAppointment()
-            frmCreate.dtpAppointmentDate.Value = targetDate
             If frmCreate.ShowDialog() = DialogResult.OK Then
                 LoadDailyAppointments()
             End If

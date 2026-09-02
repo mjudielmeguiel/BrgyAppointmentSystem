@@ -28,15 +28,14 @@ Partial Class frmMain
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Menupanel = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.BtnAddDoc = New System.Windows.Forms.Button()
         Me.btnAppointment = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Menupanel.SuspendLayout()
         Me.SuspendLayout()
@@ -48,9 +47,9 @@ Partial Class frmMain
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.btnClose)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(54, 0)
+        Me.Panel1.Location = New System.Drawing.Point(76, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1312, 48)
+        Me.Panel1.Size = New System.Drawing.Size(1290, 48)
         Me.Panel1.TabIndex = 0
         '
         'lblUserRole
@@ -92,7 +91,7 @@ Partial Class frmMain
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.DarkBlue
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(1258, 0)
+        Me.btnClose.Location = New System.Drawing.Point(1236, 0)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(54, 48)
         Me.btnClose.TabIndex = 141
@@ -103,19 +102,36 @@ Partial Class frmMain
         'Menupanel
         '
         Me.Menupanel.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Menupanel.Controls.Add(Me.Button5)
         Me.Menupanel.Controls.Add(Me.Button6)
         Me.Menupanel.Controls.Add(Me.BtnAddDoc)
         Me.Menupanel.Controls.Add(Me.btnAppointment)
         Me.Menupanel.Controls.Add(Me.Button4)
-        Me.Menupanel.Controls.Add(Me.Button5)
         Me.Menupanel.Controls.Add(Me.Button7)
-        Me.Menupanel.Controls.Add(Me.Button3)
         Me.Menupanel.Controls.Add(Me.Button2)
         Me.Menupanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.Menupanel.Location = New System.Drawing.Point(0, 0)
         Me.Menupanel.Name = "Menupanel"
-        Me.Menupanel.Size = New System.Drawing.Size(54, 768)
+        Me.Menupanel.Size = New System.Drawing.Size(76, 768)
         Me.Menupanel.TabIndex = 2
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Location = New System.Drawing.Point(0, 305)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(76, 61)
+        Me.Button6.TabIndex = 152
+        Me.Button6.Text = "History"
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'BtnAddDoc
         '
@@ -124,15 +140,15 @@ Partial Class frmMain
         Me.BtnAddDoc.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnAddDoc.FlatAppearance.BorderSize = 0
         Me.BtnAddDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAddDoc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddDoc.ForeColor = System.Drawing.Color.DarkBlue
+        Me.BtnAddDoc.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddDoc.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.BtnAddDoc.Image = CType(resources.GetObject("BtnAddDoc.Image"), System.Drawing.Image)
-        Me.BtnAddDoc.Location = New System.Drawing.Point(0, 234)
+        Me.BtnAddDoc.Location = New System.Drawing.Point(0, 244)
         Me.BtnAddDoc.Name = "BtnAddDoc"
-        Me.BtnAddDoc.Size = New System.Drawing.Size(54, 39)
+        Me.BtnAddDoc.Size = New System.Drawing.Size(76, 61)
         Me.BtnAddDoc.TabIndex = 151
-        Me.BtnAddDoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnAddDoc.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnAddDoc.Text = "Documents"
+        Me.BtnAddDoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnAddDoc.UseVisualStyleBackColor = False
         '
         'btnAppointment
@@ -142,15 +158,15 @@ Partial Class frmMain
         Me.btnAppointment.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnAppointment.FlatAppearance.BorderSize = 0
         Me.btnAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAppointment.ForeColor = System.Drawing.Color.DarkBlue
+        Me.btnAppointment.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAppointment.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnAppointment.Image = CType(resources.GetObject("btnAppointment.Image"), System.Drawing.Image)
-        Me.btnAppointment.Location = New System.Drawing.Point(0, 195)
+        Me.btnAppointment.Location = New System.Drawing.Point(0, 183)
         Me.btnAppointment.Name = "btnAppointment"
-        Me.btnAppointment.Size = New System.Drawing.Size(54, 39)
+        Me.btnAppointment.Size = New System.Drawing.Size(76, 61)
         Me.btnAppointment.TabIndex = 150
-        Me.btnAppointment.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAppointment.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAppointment.Text = "Calendar"
+        Me.btnAppointment.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnAppointment.UseVisualStyleBackColor = False
         '
         'Button4
@@ -160,15 +176,15 @@ Partial Class frmMain
         Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(0, 156)
+        Me.Button4.Location = New System.Drawing.Point(0, 122)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(54, 39)
+        Me.Button4.Size = New System.Drawing.Size(76, 61)
         Me.Button4.TabIndex = 149
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button4.Text = "Residents"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Button5
@@ -178,15 +194,15 @@ Partial Class frmMain
         Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button5.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(0, 117)
+        Me.Button5.Location = New System.Drawing.Point(0, 366)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(54, 39)
+        Me.Button5.Size = New System.Drawing.Size(76, 61)
         Me.Button5.TabIndex = 148
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button5.Text = "Settings"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button5.UseVisualStyleBackColor = False
         '
         'Button7
@@ -196,34 +212,16 @@ Partial Class frmMain
         Me.Button7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Button7.FlatAppearance.BorderSize = 0
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button7.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
-        Me.Button7.Location = New System.Drawing.Point(0, 78)
+        Me.Button7.Location = New System.Drawing.Point(0, 61)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(54, 39)
+        Me.Button7.Size = New System.Drawing.Size(76, 61)
         Me.Button7.TabIndex = 145
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button7.Text = "Users List"
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button7.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(0, 39)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(54, 39)
-        Me.Button3.TabIndex = 146
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -232,43 +230,25 @@ Partial Class frmMain
         Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Location = New System.Drawing.Point(0, 0)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(54, 39)
+        Me.Button2.Size = New System.Drawing.Size(76, 61)
         Me.Button2.TabIndex = 143
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.Text = "Home"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(54, 48)
+        Me.Panel2.Location = New System.Drawing.Point(76, 48)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1312, 720)
+        Me.Panel2.Size = New System.Drawing.Size(1290, 720)
         Me.Panel2.TabIndex = 3
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(0, 273)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(54, 39)
-        Me.Button6.TabIndex = 152
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button6.UseVisualStyleBackColor = False
         '
         'frmMain
         '
@@ -298,7 +278,6 @@ Partial Class frmMain
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button7 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents lblUserRole As Label
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button

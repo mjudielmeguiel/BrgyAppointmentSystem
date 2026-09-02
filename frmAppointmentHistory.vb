@@ -3,23 +3,22 @@
 Public Class frmAppointmentHistory
 
     Private Sub frmAppointmentHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Setup Filter Dropdown
         cboStatusFilter.Items.Clear()
         cboStatusFilter.Items.AddRange({"ALL", "PENDING", "APPROVED", "REJECTED", "COMPLETED", "CANCELLED"})
         cboStatusFilter.SelectedIndex = 0
 
-        ' Enable Date Picker CheckBox so date filtering is optional
-        dtpFilterDate.ShowCheckBox = True
-        dtpFilterDate.Checked = False
+        dtpFromDate.Value = DateTime.Today.AddDays(-30)
+        dtpToDate.Value = DateTime.Today
 
-        ' Style DataGridView
+        dtpFromDate.ShowCheckBox = True
+        dtpToDate.ShowCheckBox = True
+        dtpFromDate.Checked = False
+        dtpToDate.Checked = False
+
         StyleDataGridView(dgvHistory)
-
-        ' Load complete history logs
         LoadAppointmentHistory()
     End Sub
 
-    ' --- LOAD HISTORICAL RECORDS FROM DATABASE ---
     Private Sub LoadAppointmentHistory()
         Try
             connection()
@@ -28,14 +27,16 @@ Public Class frmAppointmentHistory
                   "Purpose, Department, ScheduledDate AS 'Pick-up Date', Status, CreatedAt AS 'Date Created' " &
                   "FROM appointments WHERE 1=1 "
 
-            ' 1. Filter by Status Dropdown
             If cboStatusFilter.Text <> "ALL" AndAlso Not String.IsNullOrEmpty(cboStatusFilter.Text) Then
                 sql &= "AND UPPER(Status) = @status "
             End If
 
-            ' 2. Filter by Specific Pick-Up Date (if checked)
-            If dtpFilterDate.Checked Then
-                sql &= "AND DATE(ScheduledDate) = @filterDate "
+            If dtpFromDate.Checked AndAlso dtpToDate.Checked Then
+                sql &= "AND DATE(CreatedAt) BETWEEN @fromDate AND @toDate "
+            ElseIf dtpFromDate.Checked Then
+                sql &= "AND DATE(CreatedAt) >= @fromDate "
+            ElseIf dtpToDate.Checked Then
+                sql &= "AND DATE(CreatedAt) <= @toDate "
             End If
 
             sql &= "ORDER BY AppointmentID DESC"
@@ -46,8 +47,12 @@ Public Class frmAppointmentHistory
                 cmd.Parameters.AddWithValue("@status", cboStatusFilter.Text.ToUpper())
             End If
 
-            If dtpFilterDate.Checked Then
-                cmd.Parameters.AddWithValue("@filterDate", dtpFilterDate.Value.ToString("yyyy-MM-dd"))
+            If dtpFromDate.Checked Then
+                cmd.Parameters.AddWithValue("@fromDate", dtpFromDate.Value.ToString("yyyy-MM-dd"))
+            End If
+
+            If dtpToDate.Checked Then
+                cmd.Parameters.AddWithValue("@toDate", dtpToDate.Value.ToString("yyyy-MM-dd"))
             End If
 
             Dim da As New MySqlDataAdapter(cmd)
@@ -55,8 +60,6 @@ Public Class frmAppointmentHistory
             da.Fill(dt)
 
             dgvHistory.DataSource = dt
-
-            ' Re-apply Control No. text filter if active
             ApplyControlNoSearch()
 
         Catch ex As Exception
@@ -66,17 +69,18 @@ Public Class frmAppointmentHistory
         End Try
     End Sub
 
-    ' --- EVENT HANDLER FOR DATE PICKER FILTER ---
-    Private Sub dtpFilterDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpFilterDate.ValueChanged
+    Private Sub dtpFromDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpFromDate.ValueChanged
         LoadAppointmentHistory()
     End Sub
 
-    ' --- EVENT HANDLER FOR STATUS DROPDOWN ---
-    Private Sub cboStatusFilter_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub dtpToDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpToDate.ValueChanged
         LoadAppointmentHistory()
     End Sub
 
-    ' --- SEARCH SPECIFICALLY BY APPOINTMENT CONTROL NUMBER ---
+    Private Sub cboStatusFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboStatusFilter.SelectedIndexChanged
+        LoadAppointmentHistory()
+    End Sub
+
     Private Sub txtSearchControlNo_TextChanged(sender As Object, e As EventArgs) Handles txtSearchControlNo.TextChanged
         ApplyControlNoSearch()
     End Sub
@@ -94,7 +98,34 @@ Public Class frmAppointmentHistory
         End If
     End Sub
 
-    ' --- CUSTOM GRID STYLING ---
+    Private Sub dgvHistory_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvHistory.CellFormatting
+        If e.RowIndex >= 0 AndAlso dgvHistory.Columns(e.ColumnIndex).Name = "Status" AndAlso e.Value IsNot Nothing Then
+            Dim statusValue As String = e.Value.ToString().ToUpper().Trim()
+
+            Select Case statusValue
+                Case "PENDING"
+                    e.CellStyle.ForeColor = Color.FromArgb(180, 120, 0)
+                    e.CellStyle.Font = New Font(dgvHistory.Font, FontStyle.Bold)
+
+                Case "REJECTED"
+                    e.CellStyle.ForeColor = Color.FromArgb(180, 0, 0)
+                    e.CellStyle.Font = New Font(dgvHistory.Font, FontStyle.Bold)
+
+                Case "APPROVED"
+                    e.CellStyle.ForeColor = Color.FromArgb(0, 120, 200)
+                    e.CellStyle.Font = New Font(dgvHistory.Font, FontStyle.Bold)
+
+                Case "COMPLETED"
+                    e.CellStyle.ForeColor = Color.FromArgb(0, 130, 40)
+                    e.CellStyle.Font = New Font(dgvHistory.Font, FontStyle.Bold)
+
+                Case "CANCELLED"
+                    e.CellStyle.ForeColor = Color.FromArgb(100, 100, 100)
+                    e.CellStyle.Font = New Font(dgvHistory.Font, FontStyle.Bold)
+            End Select
+        End If
+    End Sub
+
     Private Sub StyleDataGridView(dgv As DataGridView)
         dgv.EnableHeadersVisualStyles = False
         dgv.BorderStyle = BorderStyle.None

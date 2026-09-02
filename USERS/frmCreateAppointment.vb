@@ -5,9 +5,19 @@ Imports System.Drawing.Drawing2D
 Public Class frmCreateAppointment
 
     Private selectedResidentID As Integer = 0
+    Private authLetterBytes As Byte() = Nothing
+    Private repIDBytes As Byte() = Nothing
+
+    Public Class ServiceItem
+        Public Property ServiceName As String
+        Public Property DepartmentName As String
+
+        Public Overrides Function ToString() As String
+            Return ServiceName
+        End Function
+    End Class
 
     Private Sub frmCreateAppointment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Setup "Request For" Options
         cboRequestFor.Items.Clear()
         cboRequestFor.Items.AddRange({
             "Self",
@@ -16,60 +26,139 @@ Public Class frmCreateAppointment
         })
         cboRequestFor.SelectedIndex = 0
 
-        ' Setup Document Service Types Dropdown
-        cboRequestType.Items.Clear()
-        cboRequestType.Items.AddRange({
-            "Barangay Clearance",
-            "Certificate of Indigency",
-            "Barangay ID",
-            "Business Permit",
-            "First Time Job Seeker Certificate",
-            "Certificate of Residency"
-        })
+        ToggleRepresentativeFields(False)
 
-        ' Setup Department Dropdown
-        cboDepartment.Items.Clear()
-        cboDepartment.Items.AddRange({
-            "GENERAL SERVICES",
-            "HEALTH OFFICE",
-            "LUPONG TAGAPAMAYAPA",
-            "SOCIAL SERVICES"
-        })
+        LoadDepartments()
+        LoadDocumentServices()
 
-        ' Set default Pick-up Date constraints (Prevent past dates)
-        dtpAppointmentDate.MinDate = DateTime.Today
-
-        ' Default to next weekday if today is a weekend
-        Dim initialDate As DateTime = DateTime.Today
-        While initialDate.DayOfWeek = DayOfWeek.Saturday OrElse initialDate.DayOfWeek = DayOfWeek.Sunday
-            initialDate = initialDate.AddDays(1)
-        End While
-        dtpAppointmentDate.Value = initialDate
-
-        ' Generate unique Control Number for Label
         lblControlNo.Text = GenerateControlNumber()
-
-        ' Load logged user by default if available
         LoadLoggedUserDefault()
     End Sub
 
-    ' --- PREVENT WEEKEND SELECTION ON PICKUP DATE ---
-    Private Sub dtpAppointmentDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpAppointmentDate.ValueChanged
-        Dim selectedDate As DateTime = dtpAppointmentDate.Value
+    Private Sub cboRequestFor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRequestFor.SelectedIndexChanged
+        Dim selectedOption As String = cboRequestFor.Text.Trim()
 
-        If selectedDate.DayOfWeek = DayOfWeek.Saturday OrElse selectedDate.DayOfWeek = DayOfWeek.Sunday Then
-            MsgBox("The Barangay Office is closed on weekends. Please select a weekday (Monday–Friday) for document pick-up.", MsgBoxStyle.Exclamation, "Invalid Pick-up Date")
-
-            ' Auto-adjust to next Monday
-            Dim adjustedDate As DateTime = selectedDate
-            While adjustedDate.DayOfWeek = DayOfWeek.Saturday OrElse adjustedDate.DayOfWeek = DayOfWeek.Sunday
-                adjustedDate = adjustedDate.AddDays(1)
-            End While
-            dtpAppointmentDate.Value = adjustedDate
+        If selectedOption = "Family Member / Relative" OrElse selectedOption = "Representative / On Behalf" Then
+            ToggleRepresentativeFields(True)
+        Else
+            ToggleRepresentativeFields(False)
+            txtNameOfRepresentative.Clear()
+            authLetterBytes = Nothing
+            repIDBytes = Nothing
+            If picAuthLetter IsNot Nothing Then picAuthLetter.Image = Nothing
+            If picRepID IsNot Nothing Then picRepID.Image = Nothing
         End If
     End Sub
 
-    ' --- AUTO-GENERATE CONTROL NUMBER FOR LABEL ---
+    Private Sub ToggleRepresentativeFields(isVisible As Boolean)
+        If lblRepName IsNot Nothing Then lblRepName.Visible = isVisible
+        If txtNameOfRepresentative IsNot Nothing Then txtNameOfRepresentative.Visible = isVisible
+        If lblAuthLetter IsNot Nothing Then lblAuthLetter.Visible = isVisible
+        If picAuthLetter IsNot Nothing Then picAuthLetter.Visible = isVisible
+        If lblRepID IsNot Nothing Then lblRepID.Visible = isVisible
+        If picRepID IsNot Nothing Then picRepID.Visible = isVisible
+    End Sub
+
+    Private Sub picAuthLetter_DoubleClick(sender As Object, e As EventArgs) Handles picAuthLetter.DoubleClick
+        Using ofd As New OpenFileDialog()
+            ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png"
+            ofd.Title = "Select Authorization Letter Image"
+
+            If ofd.ShowDialog() = DialogResult.OK Then
+                authLetterBytes = File.ReadAllBytes(ofd.FileName)
+                picAuthLetter.SizeMode = PictureBoxSizeMode.Zoom
+                picAuthLetter.Image = Image.FromFile(ofd.FileName)
+            End If
+        End Using
+    End Sub
+
+    Private Sub picRepID_DoubleClick(sender As Object, e As EventArgs) Handles picRepID.DoubleClick
+        Using ofd As New OpenFileDialog()
+            ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png"
+            ofd.Title = "Select Representative Valid ID Image"
+
+            If ofd.ShowDialog() = DialogResult.OK Then
+                repIDBytes = File.ReadAllBytes(ofd.FileName)
+                picRepID.SizeMode = PictureBoxSizeMode.Zoom
+                picRepID.Image = Image.FromFile(ofd.FileName)
+            End If
+        End Using
+    End Sub
+
+    Private Sub LoadDepartments()
+        cboDepartment.Items.Clear()
+        Try
+            connection()
+            sql = "SELECT DepartmentName FROM departments WHERE IsActive = 1 ORDER BY DepartmentName ASC"
+            cmd = New MySqlCommand(sql, cn)
+            dr = cmd.ExecuteReader()
+            While dr.Read()
+                If Not IsDBNull(dr("DepartmentName")) Then
+                    cboDepartment.Items.Add(dr("DepartmentName").ToString())
+                End If
+            End While
+            dr.Close()
+        Catch ex As Exception
+            cboDepartment.Items.AddRange({"GENERAL SERVICES", "HEALTH OFFICE", "LUPONG TAGAPAMAYAPA", "SOCIAL SERVICES"})
+        Finally
+            CloseConnection()
+        End Try
+    End Sub
+
+    Private Sub LoadDocumentServices(Optional selectedDept As String = "")
+        cboRequestType.Items.Clear()
+        Try
+            connection()
+            sql = "SELECT ds.ServiceName, d.DepartmentName " &
+                  "FROM document_services ds " &
+                  "LEFT JOIN departments d ON ds.DepartmentID = d.DepartmentID " &
+                  "WHERE (ds.IsActive = 1 OR ds.IsActive IS NULL) "
+
+            If Not String.IsNullOrEmpty(selectedDept) Then
+                sql &= "AND d.DepartmentName = @dept "
+            End If
+
+            sql &= "ORDER BY ds.ServiceName ASC"
+
+            cmd = New MySqlCommand(sql, cn)
+
+            If Not String.IsNullOrEmpty(selectedDept) Then
+                cmd.Parameters.AddWithValue("@dept", selectedDept)
+            End If
+
+            dr = cmd.ExecuteReader()
+
+            While dr.Read()
+                Dim item As New ServiceItem With {
+                    .ServiceName = dr("ServiceName").ToString(),
+                    .DepartmentName = If(IsDBNull(dr("DepartmentName")), "", dr("DepartmentName").ToString())
+                }
+                cboRequestType.Items.Add(item)
+            End While
+            dr.Close()
+        Catch ex As Exception
+        Finally
+            CloseConnection()
+        End Try
+    End Sub
+
+    Private Sub cboDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDepartment.SelectedIndexChanged
+        If cboDepartment.SelectedItem IsNot Nothing Then
+            LoadDocumentServices(cboDepartment.SelectedItem.ToString())
+        Else
+            LoadDocumentServices()
+        End If
+    End Sub
+
+    Private Sub cboRequestType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRequestType.SelectedIndexChanged
+        If cboRequestType.SelectedItem IsNot Nothing AndAlso TypeOf cboRequestType.SelectedItem Is ServiceItem Then
+            Dim selectedItem As ServiceItem = CType(cboRequestType.SelectedItem, ServiceItem)
+            If Not String.IsNullOrEmpty(selectedItem.DepartmentName) AndAlso (cboDepartment.SelectedItem Is Nothing OrElse cboDepartment.SelectedItem.ToString() <> selectedItem.DepartmentName) Then
+                cboDepartment.SelectedItem = selectedItem.DepartmentName
+            End If
+        End If
+    End Sub
+
     Private Function GenerateControlNumber() As String
         Dim newCtrlNo As String = "APP-001"
         Try
@@ -86,7 +175,6 @@ Public Class frmCreateAppointment
             dr.Close()
 
         Catch ex As Exception
-            ' Default fallback APP-001 on error
         Finally
             CloseConnection()
         End Try
@@ -94,7 +182,6 @@ Public Class frmCreateAppointment
         Return newCtrlNo
     End Function
 
-    ' --- DEFAULT LOAD LOGGED USER PROFILE & PICTURE ---
     Private Sub LoadLoggedUserDefault()
         If String.IsNullOrEmpty(LoggedFullname) Then Return
 
@@ -121,13 +208,11 @@ Public Class frmCreateAppointment
             dr.Close()
 
         Catch ex As Exception
-            ' Keep blank if auto-load fails
         Finally
             CloseConnection()
         End Try
     End Sub
 
-    ' --- SELECT USER (...) BUTTON CLICK HANDLER ---
     Private Sub btnSelectUser_Click(sender As Object, e As EventArgs) Handles btnSelectUser.Click
         Using frm As New ResidenceList
             If frm.ShowDialog() = DialogResult.OK Then
@@ -138,7 +223,6 @@ Public Class frmCreateAppointment
         End Using
     End Sub
 
-    ' --- LOAD SELECTED USER PICTURE ---
     Private Sub LoadSelectedResidentPicture(resID As Integer)
         Try
             connection()
@@ -166,7 +250,6 @@ Public Class frmCreateAppointment
         End Try
     End Sub
 
-    ' --- PERFECT CIRCULAR PROFILE PICTURE CROPPER ---
     Private Function MakeCircularImage(srcImage As Image) As Image
         Dim targetWidth As Integer = If(picUserProfile IsNot Nothing AndAlso picUserProfile.Width > 0, picUserProfile.Width, 100)
         Dim targetHeight As Integer = If(picUserProfile IsNot Nothing AndAlso picUserProfile.Height > 0, picUserProfile.Height, 100)
@@ -193,25 +276,31 @@ Public Class frmCreateAppointment
         Return bmp
     End Function
 
-    ' --- AUTOMATIC DEPARTMENT ROUTING ON REQUEST TYPE CHANGE ---
-    Private Sub cboRequestType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboRequestType.SelectedIndexChanged
-        Select Case cboRequestType.Text.Trim()
-            Case "Barangay Clearance", "Barangay ID", "Certificate of Residency"
-                cboDepartment.SelectedItem = "GENERAL SERVICES"
-            Case "Certificate of Indigency", "First Time Job Seeker Certificate"
-                cboDepartment.SelectedItem = "SOCIAL SERVICES"
-            Case "Business Permit"
-                cboDepartment.SelectedItem = "GENERAL SERVICES"
-        End Select
-    End Sub
-
-    ' --- SUBMIT PICK-UP APPOINTMENT TO DATABASE ---
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        ' Validation checks
         If String.IsNullOrWhiteSpace(txtName.Text) Then
             MsgBox("Please select or enter a resident name.", MsgBoxStyle.Exclamation, "Validation Error")
             txtName.Focus()
             Return
+        End If
+
+        Dim isRepresentative As Boolean = (cboRequestFor.Text.Trim() = "Family Member / Relative" OrElse cboRequestFor.Text.Trim() = "Representative / On Behalf")
+
+        If isRepresentative Then
+            If String.IsNullOrWhiteSpace(txtNameOfRepresentative.Text) Then
+                MsgBox("Please enter the Representative's full name.", MsgBoxStyle.Exclamation, "Validation Error")
+                txtNameOfRepresentative.Focus()
+                Return
+            End If
+
+            If authLetterBytes Is Nothing Then
+                MsgBox("Please double-click the Authorization Letter box to upload the document image.", MsgBoxStyle.Exclamation, "Validation Error")
+                Return
+            End If
+
+            If repIDBytes Is Nothing Then
+                MsgBox("Please double-click the Representative ID box to upload the ID image.", MsgBoxStyle.Exclamation, "Validation Error")
+                Return
+            End If
         End If
 
         If cboRequestType.SelectedIndex = -1 AndAlso String.IsNullOrWhiteSpace(cboRequestType.Text) Then
@@ -226,13 +315,6 @@ Public Class frmCreateAppointment
             Return
         End If
 
-        ' Final Weekend Validation
-        Dim pickupSchedule As DateTime = dtpAppointmentDate.Value.Date.Add(dtpAppointmentTime.Value.TimeOfDay)
-        If pickupSchedule.DayOfWeek = DayOfWeek.Saturday OrElse pickupSchedule.DayOfWeek = DayOfWeek.Sunday Then
-            MsgBox("Cannot schedule document pick-up on weekends. Please pick a weekday.", MsgBoxStyle.Exclamation, "Validation Error")
-            Return
-        End If
-
         If String.IsNullOrWhiteSpace(txtPurpose.Text) Then
             MsgBox("Please state the purpose of your appointment.", MsgBoxStyle.Exclamation, "Validation Error")
             txtPurpose.Focus()
@@ -242,17 +324,20 @@ Public Class frmCreateAppointment
         Try
             connection()
 
-            sql = "INSERT INTO appointments (ControlNo, ResidentID, FullName, RequestType, Purpose, Department, DateSubmitted, ScheduledDate, Status, CreatedAt) " &
-                  "VALUES (@ctrl, @resID, @name, @reqType, @purpose, @dept, NOW(), @schedDate, 'PENDING', NOW())"
+            sql = "INSERT INTO appointments (ControlNo, ResidentID, FullName, RequestFor, RepresentativeName, AuthorizationLetter, RepresentativeIDCard, RequestType, Purpose, Department, DateSubmitted, ScheduledDate, Status, CreatedAt) " &
+                  "VALUES (@ctrl, @resID, @name, @reqFor, @repName, @authLetter, @repID, @reqType, @purpose, @dept, NOW(), NOW(), 'PENDING', NOW())"
 
             cmd = New MySqlCommand(sql, cn)
             cmd.Parameters.AddWithValue("@ctrl", lblControlNo.Text.Trim())
             cmd.Parameters.AddWithValue("@resID", If(selectedResidentID > 0, selectedResidentID, DBNull.Value))
             cmd.Parameters.AddWithValue("@name", txtName.Text.Trim())
+            cmd.Parameters.AddWithValue("@reqFor", cboRequestFor.Text.Trim())
+            cmd.Parameters.AddWithValue("@repName", If(isRepresentative, txtNameOfRepresentative.Text.Trim(), DBNull.Value))
+            cmd.Parameters.AddWithValue("@authLetter", If(isRepresentative AndAlso authLetterBytes IsNot Nothing, authLetterBytes, DBNull.Value))
+            cmd.Parameters.AddWithValue("@repID", If(isRepresentative AndAlso repIDBytes IsNot Nothing, repIDBytes, DBNull.Value))
             cmd.Parameters.AddWithValue("@reqType", cboRequestType.Text.Trim())
             cmd.Parameters.AddWithValue("@purpose", txtPurpose.Text.Trim())
             cmd.Parameters.AddWithValue("@dept", cboDepartment.Text.Trim())
-            cmd.Parameters.AddWithValue("@schedDate", pickupSchedule)
 
             Dim rows As Integer = cmd.ExecuteNonQuery()
             If rows > 0 Then

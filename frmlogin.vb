@@ -239,7 +239,7 @@ Public Class frmlogin
 
         If String.Equals(LoggedRole, "Residence", StringComparison.OrdinalIgnoreCase) OrElse
            String.Equals(LoggedRole, "Resident", StringComparison.OrdinalIgnoreCase) Then
-            frmResidenceMain.Show()
+            'frmResidenceMain.Show()
         Else
             frmMain.Show()
         End If

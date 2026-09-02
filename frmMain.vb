@@ -9,10 +9,8 @@ Public Class frmMain
 
         Select Case LoggedRole.ToUpper()
             Case "ADMINISTRATOR", "SYSTEM ADMIN"
-                Button3.Visible = True
                 Button7.Visible = True
             Case Else
-                Button3.Visible = False
                 Button7.Visible = False
         End Select
 
@@ -71,7 +69,7 @@ Public Class frmMain
         User.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         frmcreateuser.Show()
         frmcreateuser.TopMost = True
         Me.TopMost = False
@@ -82,7 +80,13 @@ Public Class frmMain
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Barangay_Residences.Show()
+        Panel2.Controls.Clear()
+        Dim Records As New frmResidence_Records
+        Records.TopLevel = False
+        Records.FormBorderStyle = FormBorderStyle.None
+        Records.Dock = DockStyle.Fill
+        Panel2.Controls.Add(Records)
+        Records.Show()
     End Sub
 
     Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnAppointment.Click
@@ -103,5 +107,15 @@ Public Class frmMain
         History.Dock = DockStyle.Fill
         Panel2.Controls.Add(History)
         History.Show()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Panel2.Controls.Clear()
+        Dim Settings As New frmSettings
+        Settings.TopLevel = False
+        Settings.FormBorderStyle = FormBorderStyle.None
+        Settings.Dock = DockStyle.Fill
+        Panel2.Controls.Add(Settings)
+        Settings.Show()
     End Sub
 End Class
